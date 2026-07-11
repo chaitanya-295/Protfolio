@@ -1,428 +1,510 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Chaitanya Kamble-Protfolio</title>
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="" />
-	
-	<!-- Favicons -->
-	 <link href="images/favicon.jpeg" rel="icon">
-	 <link href="images/apple-touch-icon.png" rel="apple-touch-icon">   
 
-  <!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chaitanya Kamble | Personal Portfolio</title>
 
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="favicon.ico">
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Personal Portfolio of Chaitanya Kamble, Full Stack Web Developer and Computer Engineering Student. Showcasing my projects, skills, education, and services.">
+  <meta name="keywords"
+    content="Chaitanya Kamble, Portfolio, Web Developer, Computer Engineering, Python, Django, HTML, CSS, JavaScript, Sinhgad Institute">
+  <meta name="author" content="Chaitanya Kamble">
 
-	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
-	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<!-- Flexslider  -->
-	<link rel="stylesheet" href="css/flexslider.css">
-	<!-- Flaticons  -->
-	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-	<!-- Owl Carousel -->
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
+  <!-- Favicons -->
+  <link href="images/favicon.jpeg" rel="icon">
 
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
 
-	</head>
-	<body>
-	<div id="colorlib-page">
-		<div class="container-wrap">
-		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-		<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
-			<div class="text-center">
-				<div class="author-img" style="background-image: url(images/a.png);"></div>
-				<h1 id="colorlib-logo"><a href="index.html">Chaitanya Kamble</a></h1>
-				<span class="position">Full Stack<a href="#"> Web Developer</a></span>
-			</div>
-			<nav id="colorlib-main-menu" role="navigation" class="navbar">
-				<div id="navbar" class="collapse">
-					<ul>
-						<li class="active"><a href="#" data-nav-section="home">Home</a></li>
-						<li><a href="#" data-nav-section="about">About</a></li>
-						<li><a href="#" data-nav-section="services">Services</a></li>
-						<li><a href="#" data-nav-section="skills">Skills</a></li>
-						<li><a href="#" data-nav-section="education">Education</a></li>
-						<li><a href="#" data-nav-section="contact">Contact</a></li>
-					</ul>
-				</div>
-			</nav>
+<body>
 
-			<div class="colorlib-footer">
-				<ul>
-					<li><a href="https://www.facebook.com/chaitanya.kamble.5661"><i class="icon-facebook2"></i></a></li>
-					<li><a href="https://www.instagram.com/k_chaitanya29/"><i class="icon-instagram"></i></a></li>
-					<li><a href="https://www.linkedin.com/in/chaitanyakamble29"><i class="icon-linkedin2"></i></a></li>
-					<li><a href="https://github.com/chaitanya-295"><i class="icon-github"></i></a></li>
-				</ul>
-			</div>
+  <div class="app-wrapper">
 
-		</aside>
+    <!-- ==========================================
+     * NAVIGATION BAR
+     * ========================================== -->
+    <nav class="navbar navbar-expand-lg sticky-top custom-navbar">
+      <div class="container">
+        <a class="navbar-brand navbar-logo" href="#home" id="logoLink">
+          <span>&lt;/&gt;</span> Chaitanya
+        </a>
 
-		<div id="colorlib-main">
-			<section id="colorlib-hero" class="js-fullheight" data-section="home">
-				<div class="flexslider js-fullheight">
-					<ul class="slides">
-				   	<li style="background-image: url(images/img_bg_1.png);">
-				   		<div class="overlay"></div>
-				   		<div class="container-fluid">
-				   			<div class="row">
-					   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
-					   				<div class="slider-text-inner js-fullheight">
-					   					<div class="desc">
-						   					<h1>Hi! <br>I'm Chaitanya</h1>
-						   					<h2>Transforming visions into stunning Web realities.</h2>
-												<p><a class="btn btn-primary btn-learn">Download CV <i class="icon-download4"></i></a></p>
-											</div>
-					   				</div>
-					   			</div>
-					   		</div>
-				   		</div>
-				   	</li>
-				   	<li style="background-image: url(images/img_bg_2.png);">
-				   		<div class="overlay"></div>
-				   		<div class="container-fluid">
-				   			<div class="row">
-					   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
-					   				<div class="slider-text-inner">
-					   					<div class="desc">
-						   					<h1>I am <br> Web Developer</h1>
-												<h2>Transforming visions into stunning Web realities.</h2>
-												<p><a class="btn btn-primary btn-learn">View Portfolio <i class="icon-briefcase3"></i></a></p>
-											</div>
-					   				</div>
-					   			</div>
-					   		</div>
-				   		</div>
-				   	</li>
-				  	</ul>
-			  	</div>
-			</section>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">
+            <span class="navbar-toggler-span"></span>
+          </span>
+        </button>
 
-			<section class="colorlib-about" data-section="about">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="col-md-12">
-									<div class="about-desc">
-										<span class="heading-meta">About Us</span>
-										<h2 class="colorlib-heading">Who Am I?</h2>
-										<p><strong>Hello! My name is Chaitanya Kamble</strong> and I am enthusiastic Computer Engineering student of Sinhgad Institute of Technology and Science, Narhe (Aambegaon). I am in my second year and so looking forward to putting all that I have been learning into practice.</p>
-										<p>As a student I have more or less advanced programming skills in C++, Python, HTML, CSS, Bootstrap and Django. Some of the practical assignments I have done with regards to software development, web development has been exciting and fascinating and these includes; Calculator and Portfolio.</p>
-										<p>I look forward to the position in which I can further enhance my skills and utilize them for the betterment of various projects and at present I am on the lookout on internships programs and collaborative works so that I can work on them and make a good impact. If you’d like to check out my previous projects, take a closer look at my portfolio right now; If you have any questions, suggestions, or if you’re interested in cooperation – feel free to contact me right now!</p>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
-									<div class="services color-1">
-										<span class="icon2"><i class="icon-bulb"></i></span>
-										<h3>Web Design</h3>
-									</div>
-								</div>
-								<div class="col-md-4 animate-box" data-animate-effect="fadeInRight">
-									<div class="services color-2">
-										<span class="icon2"><i class="icon-globe-outline"></i></span>
-										<h3>Web Development</h3>
-									</div>
-								</div>
-								<div class="col-md-4 animate-box" data-animate-effect="fadeInTop">
-									<div class="services color-3">
-										<span class="icon2"><i class="icon-data"></i></span>
-										<h3>Freelencer</h3>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link active" href="#home" data-section="home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="#about" data-section="about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="#skills" data-section="skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="#works" data-section="works">Works</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="#services" data-section="services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="#clients" data-section="clients">Clients</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="#contact" data-section="contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar-socials border-start ps-3 d-none d-lg-flex">
+          <a href="https://github.com/chaitanya-295" target="_blank" class="social-nav-icon"><i
+              class="bi bi-github"></i></a>
+          <a href="https://www.linkedin.com/in/chaitanyakamble29" target="_blank" class="social-nav-icon"><i
+              class="bi bi-linkedin"></i></a>
+          <a href="mailto:chaitanyakamble2005@gmail.com" class="social-nav-icon"><i class="bi bi-envelope-fill"></i></a>
+        </div>
+      </div>
+    </nav>
 
+    <!-- ==========================================
+     * HERO SECTION
+     * ========================================== -->
+    <section id="home" class="hero-section" data-section-name="home">
+      <div class="container">
+        <div class="hero-grid">
 
-			
-			<section class="colorlib-services" data-section="services">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">What I do?</span>
-							<h2 class="colorlib-heading">Here are some of my services</h2>
-						</div>
-					</div>
-					<div class="row row-pt-md">
-						<div class="col-md-4 text-center animate-box">
-							<div class="services color-1">
-								<span class="icon">
-									<i class="icon-bulb"></i>
-								</span>
-								<div class="desc">
-									<h3>Freelencer</h3>
-									<p>Bringing your vision to life with reliable, tailored solutions.</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 text-center animate-box">
-							<div class="services color-4">
-								<span class="icon">
-									<i class="icon-layers2"></i>
-								</span>
-								<div class="desc">
-									<h3>Web Designer</h3>
-									<p>Designing sleek, user-friendly websites that bring brands to life online.</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 text-center animate-box">
-							<div class="services color-5">
-								<span class="icon">
-									<i class="icon-data"></i>
-								</span>
-								<div class="desc">
-									<h3>Creative Design</h3>
-									<p>Transforming concepts into captivating visuals that tell your story.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			
-			<section class="colorlib-skills" data-section="skills">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">My Speciality</span>
-							<h2 class="colorlib-heading animate-box">My Skills</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-							<p>The Curious Coder was warned not to venture into the tangled code jungle, where countless Bugs lurked, sneaky Syntax Errors danced, and unpredictable Loops spun in chaos. But the Determined Developer paid no heed. Armed with a trusty keyboard and a vision, they set off on an adventure to create the perfect app.</p>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="progress-wrap">
-								<h3>Bootstrap Template</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-1" role="progressbar" aria-valuenow="75"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:75%">
-								    <span>80%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="progress-wrap">
-								<h3>Python</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-2" role="progressbar" aria-valuenow="60"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:60%">
-								    <span>75%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="progress-wrap">
-								<h3>HTML5</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-3" role="progressbar" aria-valuenow="85"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:85%">
-								    <span>85%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="progress-wrap">
-								<h3>CSS3</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-4" role="progressbar" aria-valuenow="90"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:90%">
-								    <span>90%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="progress-wrap">
-								<h3>Django</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-5" role="progressbar" aria-valuenow="70"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:70%">
-								    <span>65%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+          <!-- Left Column: Intro Text -->
+          <div class="hero-content-left text-start animate-fade-in-left">
+            <h1 class="hero-title">Hello I'm <span class="highlight-name">Chaitanya</span></h1>
+            <h2 class="hero-subtitle">Frontend Developer</h2>
+            <p class="hero-description mt-3">
+              Building modern, responsive, and user-friendly web applications with React.js, Next.js, and Tailwind CSS.
+            </p>
+            <div class="hero-buttons">
+              <a href="#works" class="btn-hero-primary">View Projects</a>
+              <a href="#contact" class="btn-hero-secondary">Contact Me</a>
+            </div>
+          </div>
 
-			<section class="colorlib-education" data-section="education">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">Education</span>
-							<h2 class="colorlib-heading animate-box">Education</h2>
-						</div>
-					</div>
-					<div class="row">
-						<!-- Education Start -->
-						<div class="education" id="education">
-							<div class="content-inner">
-								<!--<div class="content-header">
-									<h2>Education</h2>
-								</div>-->
-								<div class="row align-items-center">
-									<div class="col-md-12">
-										<div class="edu-col">
-											<h2>Bachelor of Engineering in Computer Engineering</h2>
-											<p><strong>Expected Graduation :</strong><span> 2027 </span></p>
-											<p><em>Sinhgad Institute of Technology and Science, Narhe (Aambegaon)</em></p>
-											<p><strong>Current Standing :</strong><span> Second Year </span></p>
-											<p><strong>SGPA :</strong><span> 9.23 (First Year) </span></p>
-											<p><strong>Relevant Coursework :</strong><span> Object-Oriented Programming (OOP), Data Structures and Algorithms (DSA) </span></p>
-										</div>
-									</div>
-									<div class="col-md-12">
-										<div class="edu-col">
-											<h2>High School Diploma</h2>
-											<p><strong>Graduated :</strong><span> 2023 </span></p>
-											<p><em>Dr. B. R. AMBEDKAR JUNIOR COLLEGE, Hinganghat, Dist Wardha</em></p>
-											<p><strong>Percentage :</strong><span> 62.63% </span></p>
-											<p><strong>Relevant Coursework :</strong><span> Computer Science </span></p>
-										</div>
-									</div>
-									<div class="col-md-12">
-										<div class="edu-col">
-											<h2>School Diploma</h2>
-											<p><strong>Graduated :</strong><span> 2021 </span></p>
-											<p><em>BHARAT VIDYALAYA SCHOOL, Wela, Tq. Hinganghat, Dist Wardha</em></p>
-											<p><strong>Percentage :</strong><span>  87.6%</span></p>
-											<p><strong>Relevant Coursework :</strong><span> PCMB</span></p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-			</section>
+          <!-- Center Column: 3D Illustration -->
+          <div class="hero-content-center">
+            <img src="images/coder_avatar_3d.png" alt="OualiCode - 3D Coder" class="hero-avatar img-fluid">
+          </div>
 
-			<section class="colorlib-contact" data-section="contact">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">Get in Touch</span>
-							<h2 class="colorlib-heading">Contact</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-5">
-							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="colorlib-icon">
-									<i class="icon-globe-outline"></i>
-								</div>
-								<div class="colorlib-text">
-									<p><a href="#">chaitanyakamble2005@gmail.com</a></p>
-								</div>
-							</div>
+          <!-- Right Column: Glass Stats Card -->
+          <div class="hero-content-right">
+            <div class="glass-stats-card">
+              <div class="stat-row">
+                <span class="stat-label">Experience</span>
+                <span class="stat-value">2+ Years</span>
+              </div>
+              <div class="stat-row">
+                <span class="stat-label">Projects</span>
+                <span class="stat-value">50+</span>
+              </div>
+              <div class="stat-row">
+                <span class="stat-label">Clients</span>
+                <span class="stat-value">30+</span>
+              </div>
+              <hr class="card-divider">
+              <div class="stat-row">
+                <span class="stat-label">Availability :</span>
+                <span class="stat-value text-success-custom">Available for Work</span>
+              </div>
+            </div>
+          </div>
 
-							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="colorlib-icon">
-									<i class="icon-map"></i>
-								</div>
-								<div class="colorlib-text">
-									<p>Narhe, Pune, Maharashtra 411041</p>
-								</div>
-							</div>
+        </div>
+      </div>
+    </section>
 
-							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="colorlib-icon">
-									<i class="icon-phone"></i>
-								</div>
-								<div class="colorlib-text">
-									<p><a href="tel://">+91 9730593429</a></p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-7 col-md-push-1">
-							<div class="row">
-								<div class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box" data-animate-effect="fadeInRight">
-									<form action="">
-										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Name">
-										</div>
-										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Email">
-										</div>
-										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Subject">
-										</div>
-										<div class="form-group">
-											<textarea name="" id="message" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
-										</div>
-										<div class="form-group">
-											<input type="submit" class="btn btn-primary btn-send-message" value="Send Message">
-										</div>
-									</form>
-								</div>
-								
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+    <hr class="section-divider">
 
-		</div><!-- end:colorlib-main -->
-	</div><!-- end:container-wrap -->
-	</div><!-- end:colorlib-page -->
+    <!-- ==========================================
+     * ABOUT SECTION
+     * ========================================== -->
+    <section id="about" class="section-padding" data-section-name="about">
+      <div class="container">
+        <div class="about-card">
+          <!-- Standing Coder Avatar (Positioned absolutely in CSS to overflow top/bottom) -->
+          <img src="images/about_avatar.png" alt="OualiCode - Standing Coder" class="about-avatar">
+          <!-- Description Content (Pushed right using padding-left on the card) -->
+          <div class="about-content">
+            <h2 class="mb-3">About Me</h2>
+            <p class="text-muted fs-6 mb-3" style="line-height: 1.7;">
+              I'm a passionate developer who enjoys building modern web applications using React and clean UI design.
+              I focus on writing simple, efficient code and creating user-friendly experiences.
+            </p>
+            <a href="#contact" class="btn-hero-secondary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Flexslider -->
-	<script src="js/jquery.flexslider-min.js"></script>
-	<!-- Owl carousel -->
-	<script src="js/owl.carousel.min.js"></script>
-	<!-- Counters -->
-	<script src="js/jquery.countTo.js"></script>
-	
-	
-	<!-- MAIN JS -->
-	<script src="js/main.js"></script>
+    <!-- ==========================================
+     * TECH STACK SECTION
+     * ========================================== -->
+    <section id="skills" class="section-padding dark-tech-stack-section" data-section-name="skills"
+      style="background-color: #0f172a; color: #ffffff; overflow: hidden; padding: 60px 0;">
+      <div class="container-fluid px-0">
+        <div class="text-center mb-5">
+          <span class="section-subtitle" style="color: #6366f1;">My Tech Stack</span>
+          <h2 class="text-white mt-1">My Tech Stack</h2>
+          <p class="text-secondary small mt-2">Technologies I specialize in</p>
+        </div>
 
-	</body>
+        <div class="marquee-wrapper">
+          <div class="marquee-content">
+            <!-- List A -->
+            <div class="marquee-item"><i class="bi bi-filetype-html" style="color: #e34f26;"></i> <span>HTML5</span>
+            </div>
+            <div class="marquee-item"><i class="bi bi-filetype-css" style="color: #1572b6;"></i> <span>CSS5</span></div>
+            <div class="marquee-item"><i class="bi bi-bootstrap" style="color: #7952b3;"></i> <span>Bootstrap</span>
+            </div>
+            <div class="marquee-item"><i class="bi bi-filetype-js" style="color: #f7df1e;"></i> <span>JavaScript</span>
+            </div>
+            <div class="marquee-item"><i class="bi bi-cpu" style="color: #61dafb;"></i> <span>React.js</span></div>
+            <div class="marquee-item"><i class="bi bi-palette-fill" style="color: #38bdf8;"></i> <span>Tailwind
+                CSS</span></div>
+            <div class="marquee-item"><i class="bi bi-server" style="color: #339933;"></i> <span>Node.js</span></div>
+            <div class="marquee-item"><i class="bi bi-lightning-fill" style="color: #828282;"></i>
+              <span>Express.js</span>
+            </div>
+            <div class="marquee-item"><i class="bi bi-file-code" style="color: #44b78b;"></i> <span>Django</span></div>
+            <div class="marquee-item"><i class="bi bi-database-fill" style="color: #47a248;"></i> <span>MongoDB</span>
+            </div>
+            <div class="marquee-item"><i class="bi bi-database" style="color: #4479a1;"></i> <span>MySQL</span></div>
+            <div class="marquee-item"><i class="bi bi-cloud-fill" style="color: #ffca28;"></i> <span>Firebase</span>
+            </div>
+            <div class="marquee-item"><i class="bi bi-filetype-py" style="color: #3776ab;"></i> <span>Python</span>
+            </div>
+            <div class="marquee-item"><i class="bi bi-filetype-cpp" style="color: #00599c;"></i> <span>C++</span></div>
+            <div class="marquee-item"><i class="bi bi-github" style="color: #ffffff;"></i> <span>GitHub</span></div>
+            <div class="marquee-item"><i class="bi bi-laptop" style="color: #007acc;"></i> <span>VS Code</span></div>
+            <div class="marquee-item"><i class="bi bi-send-fill" style="color: #ff6c37;"></i> <span>Postman</span></div>
+            <div class="marquee-item"><i class="bi bi-cloud-arrow-up-fill" style="color: #00ad9f;"></i>
+              <span>Netlify</span>
+            </div>
+
+            <!-- List B (Duplicated in HTML for seamless infinite CSS scroll) -->
+            <div class="marquee-item"><i class="bi bi-filetype-html" style="color: #e34f26;"></i> <span>HTML5</span>
+            </div>
+            <div class="marquee-item"><i class="bi bi-filetype-css" style="color: #1572b6;"></i> <span>CSS5</span></div>
+            <div class="marquee-item"><i class="bi bi-bootstrap" style="color: #7952b3;"></i> <span>Bootstrap</span>
+            </div>
+            <div class="marquee-item"><i class="bi bi-filetype-js" style="color: #f7df1e;"></i> <span>JavaScript</span>
+            </div>
+            <div class="marquee-item"><i class="bi bi-cpu" style="color: #61dafb;"></i> <span>React.js</span></div>
+            <div class="marquee-item"><i class="bi bi-palette-fill" style="color: #38bdf8;"></i> <span>Tailwind
+                CSS</span></div>
+            <div class="marquee-item"><i class="bi bi-server" style="color: #339933;"></i> <span>Node.js</span></div>
+            <div class="marquee-item"><i class="bi bi-lightning-fill" style="color: #828282;"></i>
+              <span>Express.js</span></div>
+            <div class="marquee-item"><i class="bi bi-file-code" style="color: #44b78b;"></i> <span>Django</span></div>
+            <div class="marquee-item"><i class="bi bi-database-fill" style="color: #47a248;"></i> <span>MongoDB</span>
+            </div>
+            <div class="marquee-item"><i class="bi bi-database" style="color: #4479a1;"></i> <span>MySQL</span></div>
+            <div class="marquee-item"><i class="bi bi-cloud-fill" style="color: #ffca28;"></i> <span>Firebase</span>
+            </div>
+            <div class="marquee-item"><i class="bi bi-filetype-py" style="color: #3776ab;"></i> <span>Python</span>
+            </div>
+            <div class="marquee-item"><i class="bi bi-filetype-cpp" style="color: #00599c;"></i> <span>C++</span></div>
+            <div class="marquee-item"><i class="bi bi-github" style="color: #ffffff;"></i> <span>GitHub</span></div>
+            <div class="marquee-item"><i class="bi bi-laptop" style="color: #007acc;"></i> <span>VS Code</span></div>
+            <div class="marquee-item"><i class="bi bi-send-fill" style="color: #ff6c37;"></i> <span>Postman</span></div>
+            <div class="marquee-item"><i class="bi bi-cloud-arrow-up-fill" style="color: #00ad9f;"></i>
+              <span>Netlify</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+     * WORKS / PROJECTS SECTION
+     * ========================================== -->
+    <section id="works" class="section-padding" data-section-name="works">
+      <div class="container">
+        <!-- Header Row -->
+        <div class="d-flex justify-content-between align-items-end mb-5">
+          <div>
+            <span class="section-subtitle">My Work</span>
+            <h2 class="mb-0">My Work</h2>
+            <p class="text-muted small mt-2">Explore my latest projects and creations</p>
+          </div>
+          <a href="#" class="text-dark fw-semibold text-decoration-none">See all <i class="bi bi-arrow-right"></i></a>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <!-- Project 1: Project One -->
+          <div class="col-md-6 col-lg-4">
+            <div class="project-card-v2 d-flex flex-column h-100">
+              <div class="project-card-header"
+                style="background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%); height: 200px; display: flex; align-items: center; justify-content: center;">
+                <i class="bi bi-laptop text-white" style="font-size: 4rem;"></i>
+              </div>
+              <div class="project-card-body p-4 d-flex flex-column flex-grow-1">
+                <span class="text-accent text-uppercase fw-bold mb-2"
+                  style="font-size: 0.8rem; letter-spacing: 0.05em; color: #6366f1;">Web Development</span>
+                <h4 class="fs-5 mb-2">Project One</h4>
+                <p class="text-muted small mb-4 flex-grow-1">Modern web application with responsive design and smooth
+                  user experience.</p>
+                <a href="#" class="btn-project-view text-center py-2.5 w-100 mt-auto">View Details <i
+                    class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Project Two -->
+          <div class="col-md-6 col-lg-4">
+            <div class="project-card-v2 d-flex flex-column h-100">
+              <div class="project-card-header"
+                style="background: linear-gradient(135deg, #3b82f6 0%, #2dd4bf 100%); height: 200px; display: flex; align-items: center; justify-content: center;">
+                <i class="bi bi-phone text-white" style="font-size: 4rem;"></i>
+              </div>
+              <div class="project-card-body p-4 d-flex flex-column flex-grow-1">
+                <span class="text-accent text-uppercase fw-bold mb-2"
+                  style="font-size: 0.8rem; letter-spacing: 0.05em; color: #6366f1;">Mobile App</span>
+                <h4 class="fs-5 mb-2">Project Two</h4>
+                <p class="text-muted small mb-4 flex-grow-1">Mobile-first application with focus on performance and
+                  accessibility.</p>
+                <a href="#" class="btn-project-view text-center py-2.5 w-100 mt-auto">View Details <i
+                    class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Project Three -->
+          <div class="col-md-6 col-lg-4">
+            <div class="project-card-v2 d-flex flex-column h-100">
+              <div class="project-card-header"
+                style="background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%); height: 200px; display: flex; align-items: center; justify-content: center;">
+                <i class="bi bi-speedometer2 text-white" style="font-size: 4rem;"></i>
+              </div>
+              <div class="project-card-body p-4 d-flex flex-column flex-grow-1">
+                <span class="text-accent text-uppercase fw-bold mb-2"
+                  style="font-size: 0.8rem; letter-spacing: 0.05em; color: #6366f1;">Dashboard</span>
+                <h4 class="fs-5 mb-2">Project Three</h4>
+                <p class="text-muted small mb-4 flex-grow-1">Dashboard interface with data visualization and real-time
+                  updates.</p>
+                <a href="#" class="btn-project-view text-center py-2.5 w-100 mt-auto">View Details <i
+                    class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+     * SERVICES / CTA BANNER SECTION
+     * ========================================== -->
+    <section id="services" class="section-padding pt-0" data-section-name="services">
+      <div class="container">
+        <div class="cta-banner-wrapper p-5 rounded-4">
+          <div class="row align-items-center g-4">
+            <!-- Left Text Content -->
+            <div class="col-lg-6 text-start p-lg-4">
+              <h2 class="fs-1 fw-extrabold mb-3" style="color: #0f172a; line-height: 1.2;">Let's grow your brand
+                together!</h2>
+              <p class="text-muted mb-4 fs-5" style="max-width: 500px;">We help businesses build strong digital presence
+                through modern design, clean code, and smart solutions.</p>
+              <a href="#contact" class="btn-cta-services d-inline-flex align-items-center gap-2">
+                My Services <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+            <!-- Right Desk Coder Avatar -->
+            <div class="col-lg-6 text-center">
+              <img src="images/brand_avatar.png" alt="Working Coder Avatar" class="img-fluid object-contain"
+                style="max-height: 280px;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+     * CLIENTS / TESTIMONIALS SECTION
+     * ========================================== -->
+    <section id="clients" class="section-padding" data-section-name="clients">
+      <div class="container">
+        <!-- Header Row -->
+        <div class="d-flex justify-content-between align-items-end mb-5">
+          <div>
+            <span class="section-subtitle">My Clients</span>
+            <h2 class="mb-0">My Clients</h2>
+            <p class="text-muted small mt-2">Feedback from happy clients</p>
+          </div>
+          <a href="#" class="text-dark fw-semibold text-decoration-none">See all reviews <i
+              class="bi bi-arrow-right"></i></a>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <!-- Client Testimonial 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="testimonial-card-v2 p-4 h-100 d-flex flex-column justify-content-between">
+              <div>
+                <div class="testimonial-stars mb-3">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="testimonial-text mb-4 fs-6">
+                  "Outstanding work quality and professionalism. Exceeded expectations."
+                </p>
+              </div>
+              <div class="client-profile">
+                <div class="client-avatar-v2 bg-indigo">JS</div>
+                <div>
+                  <h4 class="client-name fs-6 mb-0">John Smith</h4>
+                  <span class="client-company small">CEO, TechCorp</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Client Testimonial 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="testimonial-card-v2 p-4 h-100 d-flex flex-column justify-content-between">
+              <div>
+                <div class="testimonial-stars mb-3">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="testimonial-text mb-4 fs-6">
+                  "Highly skilled and reliable. Delivered on time and within budget."
+                </p>
+              </div>
+              <div class="client-profile">
+                <div class="client-avatar-v2 bg-dark">SJ</div>
+                <div>
+                  <h4 class="client-name fs-6 mb-0">Sarah Johnson</h4>
+                  <span class="client-company small">Director, InnovateCo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Client Testimonial 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="testimonial-card-v2 p-4 h-100 d-flex flex-column justify-content-between">
+              <div>
+                <div class="testimonial-stars mb-3">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <p class="testimonial-text mb-4 fs-6">
+                  "Technical expertise is exceptional. Would definitely hire again."
+                </p>
+              </div>
+              <div class="client-profile">
+                <div class="client-avatar-v2 bg-teal">MC</div>
+                <div>
+                  <h4 class="client-name fs-6 mb-0">Michael Chen</h4>
+                  <span class="client-company small">CTO, DigitalPlus</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+     * CONTACT SECTION
+     * ========================================== -->
+    <section id="contact" class="section-padding" data-section-name="contact">
+      <div class="container">
+
+        <div class="row g-5 align-items-center">
+          <!-- Contact Form -->
+          <div class="col-lg-6">
+            <div class="glass-card contact-form-card">
+              <h3 class="mb-4">Send Message</h3>
+              <form id="contactForm" action="#">
+                <div class="row g-4">
+                  <div class="col-12">
+                    <input type="text" id="contactName" class="contact-input" placeholder="Your Name" required>
+                  </div>
+                  <div class="col-12">
+                    <input type="email" id="contactEmail" class="contact-input" placeholder="Your Email" required>
+                  </div>
+                  <div class="col-12">
+                    <textarea id="contactMessage" rows="5" class="contact-input" placeholder="Your Message"
+                      required></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn-contact-submit mt-2">
+                      <span>Send Message</span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Contact Waving Avatar Column -->
+          <div class="col-lg-6">
+            <div
+              class="contact-hi-wrapper d-flex flex-column align-items-center justify-content-center position-relative">
+              <img src="images/contact_avatar.png" alt="OualiCode - Waving Coder" class="img-fluid object-contain"
+                style="max-height: 380px;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+     * FOOTER
+     * ========================================== -->
+    <footer class="footer">
+      <div class="container">
+
+        <div class="footer-socials">
+          <a href="https://github.com/chaitanya-295" target="_blank" class="footer-social-icon"><i
+              class="bi bi-github"></i></a>
+          <a href="https://www.linkedin.com/in/chaitanyakamble29" target="_blank" class="footer-social-icon"><i
+              class="bi bi-linkedin"></i></a>
+          <a href="mailto:chaitanyakamble2005@gmail.com" class="footer-social-icon"><i
+              class="bi bi-envelope-fill"></i></a>
+        </div>
+
+        <div class="footer-copyright">
+          &copy; <span id="copyrightYear">2026</span> Portfolio. All Rights Reserved. Redesigned with <i
+            class="bi bi-heart-fill text-danger"></i>.
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Bootstrap 5 Bundle JS CDN (includes Popper.js) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom Logic JS -->
+  <script src="js/main.js"></script>
+</body>
+
 </html>

@@ -1,310 +1,121 @@
-;(function () {
-	
-	'use strict';
-
-
-
-	var isMobile = {
-		Android: function() {
-			return navigator.userAgent.match(/Android/i);
-		},
-			BlackBerry: function() {
-			return navigator.userAgent.match(/BlackBerry/i);
-		},
-			iOS: function() {
-			return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-		},
-			Opera: function() {
-			return navigator.userAgent.match(/Opera Mini/i);
-		},
-			Windows: function() {
-			return navigator.userAgent.match(/IEMobile/i);
-		},
-			any: function() {
-			return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-		}
-	};
-
-	var fullHeight = function() {
-
-		if ( !isMobile.any() ) {
-			$('.js-fullheight').css('height', $(window).height());
-			$(window).resize(function(){
-				$('.js-fullheight').css('height', $(window).height());
-			});
-		}
-
-	};
-
-
-	var counter = function() {
-		$('.js-counter').countTo({
-			 formatter: function (value, options) {
-	      return value.toFixed(options.decimals);
-	    },
-		});
-	};
-
-
-	var counterWayPoint = function() {
-		if ($('#colorlib-counter').length > 0 ) {
-			$('#colorlib-counter').waypoint( function( direction ) {
-										
-				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
-					setTimeout( counter , 400);					
-					$(this.element).addClass('animated');
-				}
-			} , { offset: '90%' } );
-		}
-	};
-
-	// Animations
-	var contentWayPoint = function() {
-		var i = 0;
-		$('.animate-box').waypoint( function( direction ) {
-
-			if( direction === 'down' && !$(this.element).hasClass('animated') ) {
-				
-				i++;
-
-				$(this.element).addClass('item-animate');
-				setTimeout(function(){
-
-					$('body .animate-box.item-animate').each(function(k){
-						var el = $(this);
-						setTimeout( function () {
-							var effect = el.data('animate-effect');
-							if ( effect === 'fadeIn') {
-								el.addClass('fadeIn animated');
-							} else if ( effect === 'fadeInLeft') {
-								el.addClass('fadeInLeft animated');
-							} else if ( effect === 'fadeInRight') {
-								el.addClass('fadeInRight animated');
-							} else {
-								el.addClass('fadeInUp animated');
-							}
-
-							el.removeClass('item-animate');
-						},  k * 200, 'easeInOutExpo' );
-					});
-					
-				}, 100);
-				
-			}
-
-		} , { offset: '85%' } );
-	};
-
-
-	var burgerMenu = function() {
-
-		$('.js-colorlib-nav-toggle').on('click', function(event){
-			event.preventDefault();
-			var $this = $(this);
-
-			if ($('body').hasClass('offcanvas')) {
-				$this.removeClass('active');
-				$('body').removeClass('offcanvas');	
-			} else {
-				$this.addClass('active');
-				$('body').addClass('offcanvas');	
-			}
-		});
-
-
-
-	};
-
-	// Click outside of offcanvass
-	var mobileMenuOutsideClick = function() {
-
-		$(document).click(function (e) {
-	    var container = $("#colorlib-aside, .js-colorlib-nav-toggle");
-	    if (!container.is(e.target) && container.has(e.target).length === 0) {
-
-	    	if ( $('body').hasClass('offcanvas') ) {
-
-    			$('body').removeClass('offcanvas');
-    			$('.js-colorlib-nav-toggle').removeClass('active');
-			
-	    	}
-	    	
-	    }
-		});
-
-		$(window).scroll(function(){
-			if ( $('body').hasClass('offcanvas') ) {
-
-    			$('body').removeClass('offcanvas');
-    			$('.js-colorlib-nav-toggle').removeClass('active');
-			
-	    	}
-		});
-
-	};
-
-	var clickMenu = function() {
-
-		$('#navbar a:not([class="external"])').click(function(event){
-			var section = $(this).data('nav-section'),
-				navbar = $('#navbar');
-
-				if ( $('[data-section="' + section + '"]').length ) {
-			    	$('html, body').animate({
-			        	scrollTop: $('[data-section="' + section + '"]').offset().top - 55
-			    	}, 500);
-			   }
-
-		    if ( navbar.is(':visible')) {
-		    	navbar.removeClass('in');
-		    	navbar.attr('aria-expanded', 'false');
-		    	$('.js-colorlib-nav-toggle').removeClass('active');
-		    }
-
-		    event.preventDefault();
-		    return false;
-		});
-
-
-	};
-
-	// Reflect scrolling in navigation
-	var navActive = function(section) {
-
-		var $el = $('#navbar > ul');
-		$el.find('li').removeClass('active');
-		$el.each(function(){
-			$(this).find('a[data-nav-section="'+section+'"]').closest('li').addClass('active');
-		});
-
-	};
-
-	var navigationSection = function() {
-
-		var $section = $('section[data-section]');
-		
-		$section.waypoint(function(direction) {
-		  	
-		  	if (direction === 'down') {
-		    	navActive($(this.element).data('section'));
-		  	}
-		}, {
-	  		offset: '150px'
-		});
-
-		$section.waypoint(function(direction) {
-		  	if (direction === 'up') {
-		    	navActive($(this.element).data('section'));
-		  	}
-		}, {
-		  	offset: function() { return -$(this.element).height() + 155; }
-		});
-
-	};
-
-
-
-
-
-
-	var sliderMain = function() {
-		
-	  	$('#colorlib-hero .flexslider').flexslider({
-			animation: "fade",
-			slideshowSpeed: 5000,
-			directionNav: true,
-			start: function(){
-				setTimeout(function(){
-					$('.slider-text').removeClass('animated fadeInUp');
-					$('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
-				}, 500);
-			},
-			before: function(){
-				setTimeout(function(){
-					$('.slider-text').removeClass('animated fadeInUp');
-					$('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
-				}, 500);
-			}
-
-	  	});
-
-	};
-
-	var stickyFunction = function() {
-
-		var h = $('.image-content').outerHeight();
-
-		if ($(window).width() <= 992 ) {
-			$("#sticky_item").trigger("sticky_kit:detach");
-		} else {
-			$('.sticky-parent').removeClass('stick-detach');
-			$("#sticky_item").trigger("sticky_kit:detach");
-			$("#sticky_item").trigger("sticky_kit:unstick");
-		}
-
-		$(window).resize(function(){
-			var h = $('.image-content').outerHeight();
-			$('.sticky-parent').css('height', h);
-
-
-			if ($(window).width() <= 992 ) {
-				$("#sticky_item").trigger("sticky_kit:detach");
-			} else {
-				$('.sticky-parent').removeClass('stick-detach');
-				$("#sticky_item").trigger("sticky_kit:detach");
-				$("#sticky_item").trigger("sticky_kit:unstick");
-
-				$("#sticky_item").stick_in_parent();
-			}
-			
-
-			
-
-		});
-
-		$('.sticky-parent').css('height', h);
-
-		$("#sticky_item").stick_in_parent();
-
-	};
-
-	var owlCrouselFeatureSlide = function() {
-		$('.owl-carousel').owlCarousel({
-			animateOut: 'fadeOut',
-		   animateIn: 'fadeIn',
-		   autoplay: true,
-		   loop:true,
-		   margin:0,
-		   nav:true,
-		   dots: false,
-		   autoHeight: true,
-		   items: 1,
-		   navText: [
-		      "<i class='icon-arrow-left3 owl-direction'></i>",
-		      "<i class='icon-arrow-right3 owl-direction'></i>"
-	     	]
-		})
-	};
-
-	// Document on load.
-	$(function(){
-		fullHeight();
-		counter();
-		counterWayPoint();
-		contentWayPoint();
-		burgerMenu();
-
-		clickMenu();
-		// navActive();
-		navigationSection();
-		// windowScroll();
-
-
-		mobileMenuOutsideClick();
-		sliderMain();
-		stickyFunction();
-		owlCrouselFeatureSlide();
-	});
-
-
-}());
+/**
+ * Portfolio V2 Custom JavaScript Logic
+ * Powered by Vanilla JS
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+  
+  // 1. Dynamic Copyright Year
+  const copyrightYear = document.getElementById('copyrightYear');
+  if (copyrightYear) {
+    copyrightYear.textContent = new Date().getFullYear();
+  }
+
+  // 2. Navbar Scroll Behavior (Add shadow & minimize height)
+  const navbar = document.querySelector('.custom-navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+
+  // 3. Smooth Scrolling and Auto Collapse Mobile Menu
+  const navLinks = document.querySelectorAll('.custom-nav-link, .navbar-brand');
+  const navbarCollapse = document.getElementById('navbarNav');
+  let bsCollapse = null;
+  if (navbarCollapse) {
+    bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
+  }
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      const targetId = link.getAttribute('href');
+      
+      // If it's a valid anchor link
+      if (targetId && targetId.startsWith('#')) {
+        e.preventDefault();
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          const offsetTop = targetElement.offsetTop - 85;
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+        }
+
+        // Close mobile dropdown if open
+        if (navbarCollapse && navbarCollapse.classList.contains('show') && bsCollapse) {
+          bsCollapse.hide();
+        }
+      }
+    });
+  });
+
+  // 4. Scroll Spying (Highlight active nav link on scroll)
+  const sections = document.querySelectorAll('section[data-section-name]');
+  const scrollSpy = () => {
+    const scrollPos = window.scrollY + 120;
+    
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      const sectionId = section.getAttribute('id');
+      
+      if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${sectionId}`) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  };
+  window.addEventListener('scroll', scrollSpy);
+
+  // 5. Skills Progress Bar Animation (Triggers when visible)
+  const skillsSection = document.getElementById('skills');
+  const progressFills = document.querySelectorAll('.progress-bar-fill');
+  let animated = false;
+
+  const animateSkills = () => {
+    if (!skillsSection) return;
+    
+    const rect = skillsSection.getBoundingClientRect();
+    const isVisible = rect.top <= window.innerHeight - 100 && rect.bottom >= 0;
+
+    if (isVisible && !animated) {
+      progressFills.forEach(bar => {
+        const percentage = bar.getAttribute('data-percentage');
+        bar.style.width = percentage;
+      });
+      animated = true; // Animate only once
+    }
+  };
+
+  // Run on load and on scroll
+  window.addEventListener('scroll', animateSkills);
+  animateSkills();
+
+  // 6. Interactive Contact Form Validation and Alert
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const nameVal = document.getElementById('contactName').value.trim();
+      const emailVal = document.getElementById('contactEmail').value.trim();
+      const messageVal = document.getElementById('contactMessage').value.trim();
+
+      if (nameVal && emailVal && messageVal) {
+        // Create a beautiful premium success feedback alert
+        alert(`Thank you, ${nameVal}! Your message has been received. I will contact you shortly at ${emailVal}.`);
+        contactForm.reset();
+      }
+    });
+  }
+
+});
