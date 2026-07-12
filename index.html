@@ -22,7 +22,7 @@
   <!-- Bootstrap Icons CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=1.1">
 </head>
 
 <body>
@@ -163,7 +163,6 @@
       <div class="container-fluid px-0">
         <div class="text-center mb-5">
           <span class="section-subtitle" style="color: #6366f1;">My Tech Stack</span>
-          <h2 class="text-white mt-1">My Tech Stack</h2>
           <p class="text-secondary small mt-2">Technologies I specialize in</p>
         </div>
 
@@ -213,7 +212,8 @@
                 CSS</span></div>
             <div class="marquee-item"><i class="bi bi-server" style="color: #339933;"></i> <span>Node.js</span></div>
             <div class="marquee-item"><i class="bi bi-lightning-fill" style="color: #828282;"></i>
-              <span>Express.js</span></div>
+              <span>Express.js</span>
+            </div>
             <div class="marquee-item"><i class="bi bi-file-code" style="color: #44b78b;"></i> <span>Django</span></div>
             <div class="marquee-item"><i class="bi bi-database-fill" style="color: #47a248;"></i> <span>MongoDB</span>
             </div>
@@ -227,7 +227,8 @@
             <div class="marquee-item"><i class="bi bi-laptop" style="color: #007acc;"></i> <span>VS Code</span></div>
             <div class="marquee-item"><i class="bi bi-send-fill" style="color: #ff6c37;"></i> <span>Postman</span></div>
             <div class="marquee-item"><i class="bi bi-cloud-arrow-up-fill" style="color: #00ad9f;"></i>
-              <span>Netlify</span></div>
+              <span>Netlify</span>
+            </div>
           </div>
         </div>
       </div>
@@ -239,69 +240,111 @@
     <section id="works" class="section-padding" data-section-name="works">
       <div class="container">
         <!-- Header Row -->
-        <div class="d-flex justify-content-between align-items-end mb-5">
+        <div class="d-flex justify-content-between align-items-end mb-4">
           <div>
             <span class="section-subtitle">My Work</span>
-            <h2 class="mb-0">My Work</h2>
             <p class="text-muted small mt-2">Explore my latest projects and creations</p>
           </div>
           <a href="#" class="text-dark fw-semibold text-decoration-none">See all <i class="bi bi-arrow-right"></i></a>
         </div>
 
-        <div class="row g-4 justify-content-center">
-          <!-- Project 1: Project One -->
-          <div class="col-md-6 col-lg-4">
+        <!-- Filter Controls -->
+        <div class="row mb-5">
+          <div class="col-12 d-flex justify-content-start flex-wrap gap-2 filter-tabs">
+            <button class="btn-filter active" data-filter="all">All Projects</button>
+            <button class="btn-filter" data-filter="fullstack">Full Stack</button>
+            <button class="btn-filter" data-filter="mobile">Mobile Apps</button>
+            <button class="btn-filter" data-filter="dashboard">Dashboards</button>
+          </div>
+        </div>
+
+        <div class="row g-4 justify-content-start project-grid">
+          <!-- Project 1: DevFlow -->
+          <div class="col-md-6 col-lg-4 project-item" data-category="fullstack">
             <div class="project-card-v2 d-flex flex-column h-100">
-              <div class="project-card-header"
-                style="background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%); height: 200px; display: flex; align-items: center; justify-content: center;">
-                <i class="bi bi-laptop text-white" style="font-size: 4rem;"></i>
+              <div class="project-card-header position-relative overflow-hidden">
+                <img src="images/project_devflow.png" alt="DevFlow - Developer Community Q&A"
+                  class="project-card-img img-fluid">
+                <div class="project-card-overlay"></div>
               </div>
               <div class="project-card-body p-4 d-flex flex-column flex-grow-1">
-                <span class="text-accent text-uppercase fw-bold mb-2"
-                  style="font-size: 0.8rem; letter-spacing: 0.05em; color: #6366f1;">Web Development</span>
-                <h4 class="fs-5 mb-2">Project One</h4>
-                <p class="text-muted small mb-4 flex-grow-1">Modern web application with responsive design and smooth
-                  user experience.</p>
-                <a href="#" class="btn-project-view text-center py-2.5 w-100 mt-auto">View Details <i
-                    class="bi bi-arrow-right"></i></a>
+                <div class="d-flex flex-wrap gap-2 mb-3 tech-badges">
+                  <span class="tech-badge">React</span>
+                  <span class="tech-badge">Node.js</span>
+                  <span class="tech-badge">MongoDB</span>
+                </div>
+                <h4 class="fs-5 mb-2">DevFlow</h4>
+                <p class="text-muted small mb-4 flex-grow-1">A modern developer Q&A community platform, featuring
+                  real-time voting, markdown support, and system stats.</p>
+                <div class="d-flex align-items-center justify-content-between gap-2 mt-auto">
+                  <a href="https://github.com/chaitanya-295" target="_blank"
+                    class="btn-project-secondary py-2 px-3 flex-shrink-0" title="View Source Code">
+                    <i class="bi bi-github"></i>
+                  </a>
+                  <a href="#" class="btn-project-view text-center py-2.5 flex-grow-1">
+                    Live Demo <i class="bi bi-box-arrow-up-right ms-1" style="font-size: 0.8rem;"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Project 2: Project Two -->
-          <div class="col-md-6 col-lg-4">
+          <!-- Project 2: Apex Tracker -->
+          <div class="col-md-6 col-lg-4 project-item" data-category="mobile">
             <div class="project-card-v2 d-flex flex-column h-100">
-              <div class="project-card-header"
-                style="background: linear-gradient(135deg, #3b82f6 0%, #2dd4bf 100%); height: 200px; display: flex; align-items: center; justify-content: center;">
-                <i class="bi bi-phone text-white" style="font-size: 4rem;"></i>
+              <div class="project-card-header position-relative overflow-hidden">
+                <img src="images/project_apex.png" alt="Apex Fitness & Habit Tracker"
+                  class="project-card-img img-fluid">
+                <div class="project-card-overlay"></div>
               </div>
               <div class="project-card-body p-4 d-flex flex-column flex-grow-1">
-                <span class="text-accent text-uppercase fw-bold mb-2"
-                  style="font-size: 0.8rem; letter-spacing: 0.05em; color: #6366f1;">Mobile App</span>
-                <h4 class="fs-5 mb-2">Project Two</h4>
-                <p class="text-muted small mb-4 flex-grow-1">Mobile-first application with focus on performance and
-                  accessibility.</p>
-                <a href="#" class="btn-project-view text-center py-2.5 w-100 mt-auto">View Details <i
-                    class="bi bi-arrow-right"></i></a>
+                <div class="d-flex flex-wrap gap-2 mb-3 tech-badges">
+                  <span class="tech-badge">React Native</span>
+                  <span class="tech-badge">Firebase</span>
+                  <span class="tech-badge">Expo</span>
+                </div>
+                <h4 class="fs-5 mb-2">Apex Tracker</h4>
+                <p class="text-muted small mb-4 flex-grow-1">Mobile wellness and workout application with active goals
+                  visualization, tracking charts, and dark theme.</p>
+                <div class="d-flex align-items-center justify-content-between gap-2 mt-auto">
+                  <a href="https://github.com/chaitanya-295" target="_blank"
+                    class="btn-project-secondary py-2 px-3 flex-shrink-0" title="View Source Code">
+                    <i class="bi bi-github"></i>
+                  </a>
+                  <a href="#" class="btn-project-view text-center py-2.5 flex-grow-1">
+                    Live Demo <i class="bi bi-box-arrow-up-right ms-1" style="font-size: 0.8rem;"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Project 3: Project Three -->
-          <div class="col-md-6 col-lg-4">
+          <!-- Project 3: Zenith AI -->
+          <div class="col-md-6 col-lg-4 project-item" data-category="dashboard">
             <div class="project-card-v2 d-flex flex-column h-100">
-              <div class="project-card-header"
-                style="background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%); height: 200px; display: flex; align-items: center; justify-content: center;">
-                <i class="bi bi-speedometer2 text-white" style="font-size: 4rem;"></i>
+              <div class="project-card-header position-relative overflow-hidden">
+                <img src="images/project_zenith.png" alt="Zenith AI - Analytics & Assistant"
+                  class="project-card-img img-fluid">
+                <div class="project-card-overlay"></div>
               </div>
               <div class="project-card-body p-4 d-flex flex-column flex-grow-1">
-                <span class="text-accent text-uppercase fw-bold mb-2"
-                  style="font-size: 0.8rem; letter-spacing: 0.05em; color: #6366f1;">Dashboard</span>
-                <h4 class="fs-5 mb-2">Project Three</h4>
-                <p class="text-muted small mb-4 flex-grow-1">Dashboard interface with data visualization and real-time
-                  updates.</p>
-                <a href="#" class="btn-project-view text-center py-2.5 w-100 mt-auto">View Details <i
-                    class="bi bi-arrow-right"></i></a>
+                <div class="d-flex flex-wrap gap-2 mb-3 tech-badges">
+                  <span class="tech-badge">Next.js</span>
+                  <span class="tech-badge">Django</span>
+                  <span class="tech-badge">WebSocket</span>
+                </div>
+                <h4 class="fs-5 mb-2">Zenith AI</h4>
+                <p class="text-muted small mb-4 flex-grow-1">An interactive real-time SaaS administration dashboard
+                  integrated with an AI assistant workspace and live charts.</p>
+                <div class="d-flex align-items-center justify-content-between gap-2 mt-auto">
+                  <a href="https://github.com/chaitanya-295" target="_blank"
+                    class="btn-project-secondary py-2 px-3 flex-shrink-0" title="View Source Code">
+                    <i class="bi bi-github"></i>
+                  </a>
+                  <a href="#" class="btn-project-view text-center py-2.5 flex-grow-1">
+                    Live Demo <i class="bi bi-box-arrow-up-right ms-1" style="font-size: 0.8rem;"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -313,8 +356,8 @@
      * SERVICES / CTA BANNER SECTION
      * ========================================== -->
     <section id="services" class="section-padding pt-0" data-section-name="services">
-      <div class="container">
-        <div class="cta-banner-wrapper p-5 rounded-4">
+      <div class="container" style="max-width: 1350px;">
+        <div class="cta-banner-wrapper p-4 rounded-4">
           <div class="row align-items-center g-4">
             <!-- Left Text Content -->
             <div class="col-lg-6 text-start p-lg-4">
@@ -329,102 +372,7 @@
             <!-- Right Desk Coder Avatar -->
             <div class="col-lg-6 text-center">
               <img src="images/brand_avatar.png" alt="Working Coder Avatar" class="img-fluid object-contain"
-                style="max-height: 280px;">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================
-     * CLIENTS / TESTIMONIALS SECTION
-     * ========================================== -->
-    <section id="clients" class="section-padding" data-section-name="clients">
-      <div class="container">
-        <!-- Header Row -->
-        <div class="d-flex justify-content-between align-items-end mb-5">
-          <div>
-            <span class="section-subtitle">My Clients</span>
-            <h2 class="mb-0">My Clients</h2>
-            <p class="text-muted small mt-2">Feedback from happy clients</p>
-          </div>
-          <a href="#" class="text-dark fw-semibold text-decoration-none">See all reviews <i
-              class="bi bi-arrow-right"></i></a>
-        </div>
-
-        <div class="row g-4 justify-content-center">
-          <!-- Client Testimonial 1 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="testimonial-card-v2 p-4 h-100 d-flex flex-column justify-content-between">
-              <div>
-                <div class="testimonial-stars mb-3">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                </div>
-                <p class="testimonial-text mb-4 fs-6">
-                  "Outstanding work quality and professionalism. Exceeded expectations."
-                </p>
-              </div>
-              <div class="client-profile">
-                <div class="client-avatar-v2 bg-indigo">JS</div>
-                <div>
-                  <h4 class="client-name fs-6 mb-0">John Smith</h4>
-                  <span class="client-company small">CEO, TechCorp</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Client Testimonial 2 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="testimonial-card-v2 p-4 h-100 d-flex flex-column justify-content-between">
-              <div>
-                <div class="testimonial-stars mb-3">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                </div>
-                <p class="testimonial-text mb-4 fs-6">
-                  "Highly skilled and reliable. Delivered on time and within budget."
-                </p>
-              </div>
-              <div class="client-profile">
-                <div class="client-avatar-v2 bg-dark">SJ</div>
-                <div>
-                  <h4 class="client-name fs-6 mb-0">Sarah Johnson</h4>
-                  <span class="client-company small">Director, InnovateCo</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Client Testimonial 3 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="testimonial-card-v2 p-4 h-100 d-flex flex-column justify-content-between">
-              <div>
-                <div class="testimonial-stars mb-3">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                </div>
-                <p class="testimonial-text mb-4 fs-6">
-                  "Technical expertise is exceptional. Would definitely hire again."
-                </p>
-              </div>
-              <div class="client-profile">
-                <div class="client-avatar-v2 bg-teal">MC</div>
-                <div>
-                  <h4 class="client-name fs-6 mb-0">Michael Chen</h4>
-                  <span class="client-company small">CTO, DigitalPlus</span>
-                </div>
-              </div>
+                style="max-height: 420px; width: 70%;">
             </div>
           </div>
         </div>
@@ -434,9 +382,12 @@
     <!-- ==========================================
      * CONTACT SECTION
      * ========================================== -->
-    <section id="contact" class="section-padding" data-section-name="contact">
+    <section id="contact" class="section-padding pt-0" data-section-name="contact">
       <div class="container">
-
+        <div class="text-center mb-5">
+          <span class="section-subtitle" style="color: #6366f1;">Get in Touch</span>
+          <p class="text-secondary small mt-2">Send us a message and we'll get back to you</p>
+        </div>
         <div class="row g-5 align-items-center">
           <!-- Contact Form -->
           <div class="col-lg-6">
@@ -451,7 +402,7 @@
                     <input type="email" id="contactEmail" class="contact-input" placeholder="Your Email" required>
                   </div>
                   <div class="col-12">
-                    <textarea id="contactMessage" rows="5" class="contact-input" placeholder="Your Message"
+                    <textarea id="contactMessage" rows="3" class="contact-input" placeholder="Your Message"
                       required></textarea>
                   </div>
                   <div class="col-12">
@@ -469,7 +420,7 @@
             <div
               class="contact-hi-wrapper d-flex flex-column align-items-center justify-content-center position-relative">
               <img src="images/contact_avatar.png" alt="OualiCode - Waving Coder" class="img-fluid object-contain"
-                style="max-height: 380px;">
+                style="max-height: 420px; width: 65%;">
             </div>
           </div>
         </div>
@@ -481,22 +432,77 @@
      * ========================================== -->
     <footer class="footer">
       <div class="container">
+        <!-- Top Footer Grid -->
+        <div class="row g-4 mb-5">
+          <!-- Col 1: Brand Info -->
+          <div class="col-lg-4 text-start">
+            <a class="footer-logo mb-3 d-inline-block" href="#home">
+              <span>&lt;/&gt;</span> Chaitanya
+            </a>
+            <p class="footer-description pe-lg-4">
+              Building modern, responsive, and user-focused web applications. Let's create something great together.
+            </p>
+            <div class="footer-socials-grid mt-4">
+              <a href="https://github.com/chaitanya-295" target="_blank" class="footer-social-icon-v3" title="GitHub"><i
+                  class="bi bi-github"></i></a>
+              <a href="https://www.linkedin.com/in/chaitanyakamble29" target="_blank" class="footer-social-icon-v3"
+                title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="mailto:chaitanyakamble2005@gmail.com" class="footer-social-icon-v3" title="Email"><i
+                  class="bi bi-envelope-fill"></i></a>
+            </div>
+          </div>
 
-        <div class="footer-socials">
-          <a href="https://github.com/chaitanya-295" target="_blank" class="footer-social-icon"><i
-              class="bi bi-github"></i></a>
-          <a href="https://www.linkedin.com/in/chaitanyakamble29" target="_blank" class="footer-social-icon"><i
-              class="bi bi-linkedin"></i></a>
-          <a href="mailto:chaitanyakamble2005@gmail.com" class="footer-social-icon"><i
-              class="bi bi-envelope-fill"></i></a>
+          <!-- Col 2: Navigation Links -->
+          <div class="col-12 col-sm-6 col-lg-4 text-start ps-lg-5 mb-4 mb-sm-0">
+            <h4 class="footer-heading mb-4">Quick Links</h4>
+            <ul class="list-unstyled footer-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About Me</a></li>
+              <li><a href="#skills">Tech Stack</a></li>
+              <li><a href="#works">My Work</a></li>
+              <li><a href="#services">Services</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Contact Info -->
+          <div class="col-12 col-sm-6 col-lg-4 text-start">
+            <h4 class="footer-heading mb-4">Contact Info</h4>
+            <ul class="list-unstyled footer-contact-info">
+              <li class="d-flex align-items-start gap-2 mb-3">
+                <i class="bi bi-envelope-fill text-accent"></i>
+                <a href="mailto:chaitanyakamble2005@gmail.com"
+                  class="text-decoration-none">chaitanyakamble2005@gmail.com</a>
+              </li>
+              <li class="d-flex align-items-start gap-2 mb-3">
+                <i class="bi bi-geo-alt-fill text-accent"></i>
+                <span>Pune, Maharashtra, India</span>
+              </li>
+              <li class="d-flex align-items-start gap-2">
+                <i class="bi bi-briefcase-fill text-accent"></i>
+                <span class="text-success-custom">Available for Projects</span>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <div class="footer-copyright">
-          &copy; <span id="copyrightYear">2026</span> Portfolio. All Rights Reserved. Redesigned with <i
-            class="bi bi-heart-fill text-danger"></i>.
-        </div>
+        <hr class="footer-divider mb-4">
 
+        <!-- Bottom copyright bar -->
+        <div class="row align-items-center">
+          <div class="col-md-6 text-start mb-3 mb-md-0">
+            <p class="footer-copyright mb-0">
+              &copy; <span id="copyrightYear">2026</span> Chaitanya Kamble. All Rights Reserved.
+            </p>
+          </div>
+          <div class="col-md-6 text-start text-md-end">
+            <p class="footer-credits mb-0">
+              Redesigned with <i class="bi bi-heart-fill text-danger mx-1"></i> &middot; Frontend Developer
+            </p>
+          </div>
+        </div>
       </div>
+      <!-- Large Watermark Name in Background -->
+      <div class="footer-watermark">Chaitanya</div>
     </footer>
 
   </div>
@@ -504,7 +510,7 @@
   <!-- Bootstrap 5 Bundle JS CDN (includes Popper.js) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Custom Logic JS -->
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=1.1"></script>
 </body>
 
 </html>

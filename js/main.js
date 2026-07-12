@@ -118,4 +118,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // 7. Interactive Project Category Filtering
+  const filterButtons = document.querySelectorAll('.filter-tabs .btn-filter');
+  const projectItems = document.querySelectorAll('.project-grid .project-item');
+
+  if (filterButtons.length > 0 && projectItems.length > 0) {
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(b => b.classList.remove('active'));
+        // Add active class to clicked button
+        btn.classList.add('active');
+
+        const selectedFilter = btn.getAttribute('data-filter');
+
+        projectItems.forEach(item => {
+          const itemCategory = item.getAttribute('data-category');
+
+          // Reset animation classes
+          item.classList.remove('fade-in-project');
+
+          if (selectedFilter === 'all' || itemCategory === selectedFilter) {
+            item.classList.remove('d-none');
+            // Force browser reflow to restart CSS animation
+            void item.offsetWidth;
+            item.classList.add('fade-in-project');
+          } else {
+            item.classList.add('d-none');
+          }
+        });
+      });
+    });
+  }
+
 });
