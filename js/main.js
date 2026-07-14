@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
         navLinks.forEach(link => {
           link.classList.remove('active');
-          if (link.getAttribute('href') === `#${sectionId}`) {
+          if (link.getAttribute('href') === `#${sectionId}` || link.getAttribute('data-section') === sectionId) {
             link.classList.add('active');
           }
         });

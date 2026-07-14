@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | Chaitanya Kamble</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Detailed About page of Chaitanya Kamble, Full Stack Web Developer and Computer Engineering Student.">
+  <meta name="keywords"
+    content="Chaitanya Kamble, About, Web Developer, Computer Engineering, Education, Sinhgad Institute">
+  <meta name="author" content="Chaitanya Kamble">
+
+  <!-- Favicons -->
+  <link href="images/favicon.jpeg" rel="icon">
+
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=1.1">
+</head>
+
+<body>
+
+  <div class="app-wrapper">
+
+    <!-- ==========================================
+     * NAVIGATION BAR
+     * ========================================== -->
+    <nav class="navbar navbar-expand-lg sticky-top custom-navbar">
+      <div class="container">
+        <a class="navbar-brand navbar-logo" href="index.html" id="logoLink">
+          <span>&lt;/&gt;</span> Chaitanya
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">
+            <span class="navbar-toggler-span"></span>
+          </span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="index.html" data-section="home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link active" href="#about" data-section="about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="index.html#skills" data-section="skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="index.html#works" data-section="works">Works</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="index.html#services" data-section="services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="index.html#clients" data-section="clients">Clients</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="index.html#contact" data-section="contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar-socials border-start ps-3 d-none d-lg-flex">
+          <a href="https://github.com/chaitanya-295" target="_blank" class="social-nav-icon"><i
+              class="bi bi-github"></i></a>
+          <a href="https://www.linkedin.com/in/chaitanyakamble29" target="_blank" class="social-nav-icon"><i
+              class="bi bi-linkedin"></i></a>
+          <a href="mailto:chaitanyakamble2005@gmail.com" class="social-nav-icon"><i class="bi bi-envelope-fill"></i></a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ==========================================
+     * ABOUT SECTION
+     * ========================================== -->
+    <section id="about" class="section-padding" data-section-name="about" style="padding-top: 80px !important;">
+      <div class="container">
+        <div class="about-card">
+          <!-- Standing Coder Avatar (Positioned absolutely in CSS to overflow top/bottom) -->
+          <img src="images/about_avatar.png" alt="OualiCode - Standing Coder" class="about-avatar">
+          <!-- Description Content (Pushed right using padding-left on the card) -->
+          <div class="about-content">
+            <h2 class="mb-3">About Me</h2>
+            <p class="text-muted fs-6 mb-4" style="line-height: 1.7;">
+              I'm a passionate developer who enjoys building modern web applications using React and clean UI design.
+              As a Computer Engineering student, I combine academic principles with hands-on full-stack development to
+              build simple, efficient, and user-focused digital experiences.
+            </p>
+
+            <!-- Quick Facts Grid -->
+            <div class="about-details-grid mb-4">
+              <div class="detail-item">
+                <i class="bi bi-person-circle detail-icon"></i>
+                <div class="detail-text">
+                  <span class="detail-label">Name</span>
+                  <span class="detail-value">Chaitanya Kamble</span>
+                </div>
+              </div>
+              <div class="detail-item">
+                <i class="bi bi-envelope-fill detail-icon"></i>
+                <div class="detail-text">
+                  <span class="detail-label">Email</span>
+                  <span class="detail-value"><a href="mailto:chaitanyakamble2005@gmail.com"
+                      class="detail-link">chaitanyakamble2005@gmail.com</a></span>
+                </div>
+              </div>
+              <div class="detail-item">
+                <i class="bi bi-geo-alt-fill detail-icon"></i>
+                <div class="detail-text">
+                  <span class="detail-label">Location</span>
+                  <span class="detail-value">Pune, Maharashtra, India</span>
+                </div>
+              </div>
+              <div class="detail-item">
+                <i class="bi bi-mortarboard-fill detail-icon"></i>
+                <div class="detail-text">
+                  <span class="detail-label">College</span>
+                  <span class="detail-value">Sinhgad Institute, Pune</span>
+                </div>
+              </div>
+              <div class="detail-item">
+                <i class="bi bi-briefcase-fill detail-icon"></i>
+                <div class="detail-text">
+                  <span class="detail-label">Freelance</span>
+                  <span class="detail-value text-success-custom">Available</span>
+                </div>
+              </div>
+              <div class="detail-item">
+                <i class="bi bi-translate detail-icon"></i>
+                <div class="detail-text">
+                  <span class="detail-label">Languages</span>
+                  <span class="detail-value">English, Hindi, Marathi</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="about-buttons d-flex gap-3 flex-wrap">
+              <a href="index.html#contact" class="btn-hero-secondary">Contact Me</a>
+              <a href="index.html#works" class="btn-about-outline">My Projects</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Core Specializations -->
+        <div class="row mt-5 pt-4">
+          <div class="col-12 text-center mb-5">
+            <span class="section-subtitle">What I Do</span>
+            <h3 class="fw-bold section-title mb-0">Core Specializations</h3>
+          </div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-6 col-lg-4">
+            <div class="spec-card h-100 p-4">
+              <div class="spec-icon-wrap">
+                <i class="bi bi-laptop-fill"></i>
+              </div>
+              <h4 class="spec-card-title">Frontend Engineering</h4>
+              <p class="spec-card-desc">Crafting interactive, pixel-perfect, and responsive user interfaces. Expert at
+                designing complex pages with React.js, Next.js, and custom styling systems.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="spec-card h-100 p-4">
+              <div class="spec-icon-wrap">
+                <i class="bi bi-cpu-fill"></i>
+              </div>
+              <h4 class="spec-card-title">Backend & APIs</h4>
+              <p class="spec-card-desc">Developing secure, scalable RESTful API services and architecture. Experienced
+                in backend systems using Django, Node.js, Express, and SQL/NoSQL databases.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="spec-card h-100 p-4">
+              <div class="spec-icon-wrap">
+                <i class="bi bi-phone-fill"></i>
+              </div>
+              <h4 class="spec-card-title">Mobile App Solutions</h4>
+              <p class="spec-card-desc">Creating modern cross-platform mobile apps. Proficient with React Native, Expo,
+                and integrating real-time databases and state synchronization with Firebase.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education Journey (Professional Timeline) -->
+        <div class="row mt-5 pt-5 justify-content-center">
+          <div class="col-lg-14">
+            <div class="text-center mb-5">
+              <span class="section-subtitle">My Education</span>
+              <h3 class="fw-bold section-title mb-0">Academic Journey</h3>
+            </div>
+
+            <div class="prof-timeline-wrapper p-4 p-md-5 rounded-4">
+              <div class="prof-timeline-container">
+                <!-- SVG Winding Road line connecting levels -->
+                <div class="prof-road-svg-wrap">
+                  <svg class="prof-road-svg" viewBox="0 0 100 500" preserveAspectRatio="none">
+                    <defs>
+                      <linearGradient id="prof-line-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="var(--color-accent)" />
+                        <stop offset="50%" stop-color="#a855f7" />
+                        <stop offset="100%" stop-color="rgba(99, 102, 241, 0.15)" />
+                      </linearGradient>
+                    </defs>
+                    <path d="M 50,0 Q 65,83 50,166 T 50,333 T 50,500" fill="none" stroke="url(#prof-line-grad)" stroke-width="4"
+                      stroke-linecap="round" />
+                  </svg>
+                </div>
+
+                <!-- Timeline Item 3 (University - Active) -->
+                <div class="prof-timeline-item active-item level-3 left-card">
+                  <div class="prof-timeline-dot-wrap">
+                    <div class="prof-timeline-dot"></div>
+                  </div>
+                  <div class="prof-timeline-card glass-card">
+                    <div class="prof-card-header">
+                      <span class="prof-year-badge active">2023 - Present</span>
+                      <div class="prof-card-icon">
+                        <i class="bi bi-mortarboard-fill"></i>
+                      </div>
+                    </div>
+                    <h4 class="prof-card-title">Bachelor of Engineering</h4>
+                    <p class="prof-card-subtitle">Computer Engineering • Sinhgad Institute, Pune</p>
+                    <ul class="prof-card-bullets">
+                      <li><i class="bi bi-check2-circle"></i> Core Subjects: Algorithms, Data Structures, Database Systems (DBMS), and OOPs.</li>
+                      <li><i class="bi bi-check2-circle"></i> Practical Focus: Full-Stack Web Development, API Architectures, and Software Design.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Timeline Item 2 (High School - Completed) -->
+                <div class="prof-timeline-item level-2 right-card">
+                  <div class="prof-timeline-dot-wrap">
+                    <div class="prof-timeline-dot"></div>
+                  </div>
+                  <div class="prof-timeline-card glass-card">
+                    <div class="prof-card-header">
+                      <span class="prof-year-badge">2021 - 2023</span>
+                      <div class="prof-card-icon">
+                        <i class="bi bi-book-half"></i>
+                      </div>
+                    </div>
+                    <h4 class="prof-card-title">Higher Secondary Certificate</h4>
+                    <p class="prof-card-subtitle">Science & Mathematics Board</p>
+                    <ul class="prof-card-bullets">
+                      <li><i class="bi bi-check2-circle"></i> Curriculum: Intensive study in Physics, Chemistry, and Advanced Mathematics.</li>
+                      <li><i class="bi bi-check2-circle"></i> Analytics: Built mathematical foundations and introductory logic skills.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Timeline Item 1 (Secondary School - Completed) -->
+                <div class="prof-timeline-item level-1 left-card">
+                  <div class="prof-timeline-dot-wrap">
+                    <div class="prof-timeline-dot"></div>
+                  </div>
+                  <div class="prof-timeline-card glass-card">
+                    <div class="prof-card-header">
+                      <span class="prof-year-badge">Graduated 2021</span>
+                      <div class="prof-card-icon">
+                        <i class="bi bi-award-fill"></i>
+                      </div>
+                    </div>
+                    <h4 class="prof-card-title">Secondary School Certificate</h4>
+                    <p class="prof-card-subtitle">Maharashtra State Board</p>
+                    <ul class="prof-card-bullets">
+                      <li><i class="bi bi-check2-circle"></i> Achievements: Graduated with distinction and high marks in Mathematics.</li>
+                      <li><i class="bi bi-check2-circle"></i> Foundation: Discovered early interest in algorithms and basic logic structures.</li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+     * FOOTER
+     * ========================================== -->
+    <footer class="footer">
+      <div class="container">
+        <!-- Top Footer Grid -->
+        <div class="row g-4 mb-5">
+          <!-- Col 1: Brand Info -->
+          <div class="col-lg-4 text-start">
+            <a class="footer-logo mb-3 d-inline-block" href="index.html#home">
+              <span>&lt;/&gt;</span> Chaitanya
+            </a>
+            <p class="footer-description pe-lg-4">
+              Building modern, responsive, and user-focused web applications. Let's create something great together.
+            </p>
+            <div class="footer-socials-grid mt-4">
+              <a href="https://github.com/chaitanya-295" target="_blank" class="footer-social-icon-v3" title="GitHub"><i
+                  class="bi bi-github"></i></a>
+              <a href="https://www.linkedin.com/in/chaitanyakamble29" target="_blank" class="footer-social-icon-v3"
+                title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="mailto:chaitanyakamble2005@gmail.com" class="footer-social-icon-v3" title="Email"><i
+                  class="bi bi-envelope-fill"></i></a>
+            </div>
+          </div>
+
+          <!-- Col 2: Navigation Links -->
+          <div class="col-12 col-sm-6 col-lg-4 text-start ps-lg-5 mb-4 mb-sm-0">
+            <h4 class="footer-heading mb-4">Quick Links</h4>
+            <ul class="list-unstyled footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#about">About Me</a></li>
+              <li><a href="index.html#skills">Tech Stack</a></li>
+              <li><a href="index.html#works">My Work</a></li>
+              <li><a href="index.html#services">Services</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Contact Info -->
+          <div class="col-12 col-sm-6 col-lg-4 text-start">
+            <h4 class="footer-heading mb-4">Contact Info</h4>
+            <ul class="list-unstyled footer-contact-info">
+              <li class="d-flex align-items-start gap-2 mb-3">
+                <i class="bi bi-envelope-fill text-accent"></i>
+                <a href="mailto:chaitanyakamble2005@gmail.com"
+                  class="text-decoration-none">chaitanyakamble2005@gmail.com</a>
+              </li>
+              <li class="d-flex align-items-start gap-2 mb-3">
+                <i class="bi bi-phone-fill text-accent"></i>
+                <span>+91 97305 93429</span>
+              </li>
+              <li class="d-flex align-items-start gap-2 mb-3">
+                <i class="bi bi-geo-alt-fill text-accent"></i>
+                <span>Pune, Maharashtra, India</span>
+              </li>
+              <li class="d-flex align-items-start gap-2">
+                <i class="bi bi-briefcase-fill text-accent"></i>
+                <span class="text-success-custom">Available for Projects</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="footer-divider mb-4">
+
+        <!-- Bottom copyright bar -->
+        <div class="row align-items-center">
+          <div class="col-md-6 text-start mb-3 mb-md-0">
+            <p class="footer-copyright mb-0">
+              &copy; <span id="copyrightYear">2026</span> Chaitanya Kamble. All Rights Reserved.
+            </p>
+          </div>
+          <div class="col-md-6 text-start text-md-end">
+            <p class="footer-credits mb-0">
+              Redesigned with <i class="bi bi-heart-fill text-danger mx-1"></i> &middot; Frontend Developer
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Large Watermark Name in Background -->
+      <div class="footer-watermark">Chaitanya</div>
+    </footer>
+
+  </div>
+
+  <!-- Bootstrap 5 Bundle JS CDN (includes Popper.js) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom Logic JS -->
+  <script src="js/main.js?v=1.1"></script>
+</body>
+
+</html>
