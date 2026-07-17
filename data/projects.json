@@ -1,0 +1,308 @@
+[
+  {
+    "id": "devflow",
+    "title": "DevFlow",
+    "tagline": "A modern developer Q&A community platform built with the MERN stack, featuring real-time voting, markdown support, and live system stats.",
+    "category": "Full Stack",
+    "categoryIcon": "bi-stack",
+    "image": "images/project_devflow.png",
+    "about": "DevFlow is a fully featured developer Q&A community platform inspired by Stack Overflow. Built end-to-end with the MERN stack (MongoDB, Express.js, React.js, Node.js), it supports real-time interactions such as up/down voting, comment threads, and live notification feeds. The UI is designed with a clean, distraction-free reading experience and a dark-mode toggle. Admin users can view system statistics including active questions, top contributors, and engagement metrics on a dedicated dashboard.",
+    "features": [
+      "Real-time voting with instant UI feedback",
+      "Rich markdown editor with code block syntax highlighting",
+      "User authentication with JWT and role-based access",
+      "Reputation system with badges and points",
+      "Live notifications using WebSockets",
+      "Admin analytics dashboard with real-time stats",
+      "Full-text search with filters and tags",
+      "Responsive design across all devices"
+    ],
+    "tech": [
+      { "name": "React.js",     "icon": "bi-cpu",              "color": "#61dafb" },
+      { "name": "Node.js",      "icon": "bi-server",           "color": "#339933" },
+      { "name": "Express.js",   "icon": "bi-lightning-fill",   "color": "#828282" },
+      { "name": "MongoDB",      "icon": "bi-database-fill",    "color": "#47a248" },
+      { "name": "WebSocket",    "icon": "bi-wifi",             "color": "#6366f1" },
+      { "name": "Tailwind CSS", "icon": "bi-palette-fill",     "color": "#38bdf8" },
+      { "name": "JWT Auth",     "icon": "bi-shield-lock-fill", "color": "#f59e0b" },
+      { "name": "Chart.js",     "icon": "bi-bar-chart-fill",   "color": "#ff6384" }
+    ],
+    "meta": {
+      "year": "2024",
+      "type": "Full Stack Web App",
+      "role": "Solo Developer",
+      "duration": "3 Months",
+      "status": "Live",
+      "github": "https://github.com/chaitanya-295",
+      "live": "#"
+    },
+    "challenges": [
+      {
+        "title": "Real-time Voting",
+        "desc": "Implementing optimistic UI updates for voting while keeping data consistent with server state required a custom event-based state management approach."
+      },
+      {
+        "title": "Scalable Search",
+        "desc": "Building full-text search across thousands of questions with filters required designing a compound MongoDB index strategy for performance."
+      },
+      {
+        "title": "Markdown Security",
+        "desc": "Sanitizing and rendering user-supplied markdown safely without XSS vulnerabilities was solved using a strict allowlist DOMPurify configuration."
+      }
+    ],
+    "related": ["apex", "zenith"]
+  },
+
+  {
+    "id": "apex",
+    "title": "Apex Tracker",
+    "tagline": "A mobile wellness & workout application with goal tracking, habit streaks, and a sleek dark-mode UI built with React Native and Firebase.",
+    "category": "Mobile App",
+    "categoryIcon": "bi-phone-fill",
+    "image": "images/project_apex.png",
+    "about": "Apex Tracker is a cross-platform mobile fitness application built with React Native and Expo. It allows users to track workouts, set daily wellness goals, monitor habit streaks, and visualize progress through interactive charts. Firebase Firestore handles real-time data sync across devices, while Firebase Auth provides secure login with Google and email. The app ships with a dark-mode-first design system and fully animated transitions throughout.",
+    "features": [
+      "Custom workout builder with exercise library",
+      "Daily habit tracking with streak counter",
+      "Interactive progress charts (weekly & monthly)",
+      "Real-time data sync via Firebase Firestore",
+      "Google OAuth and email sign-in",
+      "Push notifications for workout reminders",
+      "Offline support with AsyncStorage caching",
+      "Dark-mode-first design with smooth animations"
+    ],
+    "tech": [
+      { "name": "React Native",     "icon": "bi-phone-fill",       "color": "#61dafb" },
+      { "name": "Expo",             "icon": "bi-box",              "color": "#000000" },
+      { "name": "Firebase Auth",    "icon": "bi-shield-lock-fill", "color": "#ffca28" },
+      { "name": "Firestore",        "icon": "bi-cloud-fill",       "color": "#ff6c37" },
+      { "name": "React Navigation", "icon": "bi-map-fill",         "color": "#6366f1" },
+      { "name": "Victory Charts",   "icon": "bi-bar-chart-fill",   "color": "#e63946" },
+      { "name": "AsyncStorage",     "icon": "bi-hdd-fill",         "color": "#94a3b8" }
+    ],
+    "meta": {
+      "year": "2024",
+      "type": "Mobile App (iOS & Android)",
+      "role": "Solo Developer",
+      "duration": "2.5 Months",
+      "status": "Live",
+      "github": "https://github.com/chaitanya-295",
+      "live": "#"
+    },
+    "challenges": [
+      {
+        "title": "Offline-first Architecture",
+        "desc": "Designing a sync strategy that works offline and merges data correctly when reconnecting required a careful local-first queue approach with Firestore."
+      },
+      {
+        "title": "Animation Performance",
+        "desc": "Achieving 60fps animations across older Android devices required migrating from JS-driven to native Animated.Value with the useNativeDriver flag."
+      },
+      {
+        "title": "Chart Interactivity",
+        "desc": "Building touch-responsive charts with real data aggregation on-device demanded efficient memoization strategies to avoid re-render bottlenecks."
+      }
+    ],
+    "related": ["devflow", "zenith"]
+  },
+
+  {
+    "id": "zenith",
+    "title": "Zenith AI",
+    "tagline": "A real-time SaaS administration dashboard integrated with an AI assistant workspace and live analytics — built with Next.js and Django.",
+    "category": "Dashboard",
+    "categoryIcon": "bi-bar-chart-fill",
+    "image": "images/project_zenith.png",
+    "about": "Zenith AI is a production-grade SaaS admin dashboard featuring real-time charts, an embedded AI chat assistant, and a multi-tenant data management interface. The frontend is built with Next.js 13 App Router while the backend runs on Django with Django REST Framework and Django Channels for WebSocket support. The AI workspace integrates with OpenAI's API to provide context-aware responses on project data. Charts update live via WebSocket pushes without page refresh.",
+    "features": [
+      "Live analytics charts updated via WebSocket",
+      "Embedded AI assistant with project-aware context",
+      "Multi-tenant data management with role permissions",
+      "Next.js 13 App Router with server-side rendering",
+      "Django Channels for real-time WebSocket communication",
+      "REST API with DRF and token authentication",
+      "CSV/PDF report export with scheduled delivery",
+      "Fully responsive with mobile-optimised sidebar"
+    ],
+    "tech": [
+      { "name": "Next.js 13",      "icon": "bi-lightning-fill", "color": "#000000" },
+      { "name": "Django",          "icon": "bi-file-code",      "color": "#44b78b" },
+      { "name": "Django Channels", "icon": "bi-wifi",           "color": "#6366f1" },
+      { "name": "Python",          "icon": "bi-filetype-py",    "color": "#3776ab" },
+      { "name": "WebSocket",       "icon": "bi-reception-4",    "color": "#a78bfa" },
+      { "name": "OpenAI API",      "icon": "bi-robot",          "color": "#10a37f" },
+      { "name": "PostgreSQL",      "icon": "bi-database",       "color": "#336791" },
+      { "name": "Tailwind CSS",    "icon": "bi-palette-fill",   "color": "#38bdf8" }
+    ],
+    "meta": {
+      "year": "2024",
+      "type": "SaaS Dashboard",
+      "role": "Full Stack Developer",
+      "duration": "4 Months",
+      "status": "Live",
+      "github": "https://github.com/chaitanya-295",
+      "live": "#"
+    },
+    "challenges": [
+      {
+        "title": "WebSocket + SSR Hydration",
+        "desc": "Preventing hydration mismatches between server-rendered chart state and client-driven WebSocket updates required a careful 'defer-to-client' rendering pattern."
+      },
+      {
+        "title": "AI Context Management",
+        "desc": "Building a sliding context window that injects relevant project data into each OpenAI prompt without exceeding token limits required smart context compression logic."
+      },
+      {
+        "title": "Multi-tenant Isolation",
+        "desc": "Ensuring strict data isolation between tenants at the database query level (using Django's row-level security patterns) while keeping APIs fast was the core backend challenge."
+      }
+    ],
+    "related": ["devflow", "apex"]
+  },
+
+  {
+    "id": "shopnest",
+    "title": "ShopNest",
+    "tagline": "A full-featured e-commerce platform with product catalog, cart, Stripe payments, and a powerful admin panel — built with Django and MySQL.",
+    "category": "Full Stack",
+    "categoryIcon": "bi-bag-fill",
+    "image": "images/project_devflow.png",
+    "about": "ShopNest is a complete e-commerce solution built with Django and MySQL. It includes a full product catalog with categories and search, a session-based shopping cart, Stripe Checkout integration for payments, order management, and a custom admin panel for managing products, inventory, orders, and customers. Email confirmations are sent via SMTP on successful checkout. The frontend uses Django templates with Bootstrap 5 for a clean, responsive UI.",
+    "features": [
+      "Product catalog with categories, search, and filters",
+      "Session-based shopping cart with quantity management",
+      "Stripe Checkout integration for secure payments",
+      "Order management with status tracking",
+      "Email confirmation on checkout",
+      "Custom admin panel for inventory & orders",
+      "User authentication with registration & profiles",
+      "Mobile responsive design with Bootstrap 5"
+    ],
+    "tech": [
+      { "name": "Django",      "icon": "bi-file-code",        "color": "#44b78b" },
+      { "name": "Python",      "icon": "bi-filetype-py",      "color": "#3776ab" },
+      { "name": "MySQL",       "icon": "bi-database",         "color": "#4479a1" },
+      { "name": "Stripe API",  "icon": "bi-credit-card-fill", "color": "#635bff" },
+      { "name": "Bootstrap 5", "icon": "bi-bootstrap",        "color": "#7952b3" },
+      { "name": "HTML5",       "icon": "bi-filetype-html",    "color": "#e34f26" },
+      { "name": "JavaScript",  "icon": "bi-filetype-js",      "color": "#f7df1e" }
+    ],
+    "meta": {
+      "year": "2023",
+      "type": "E-Commerce Platform",
+      "role": "Solo Developer",
+      "duration": "2 Months",
+      "status": "Live",
+      "github": "https://github.com/chaitanya-295",
+      "live": "#"
+    },
+    "challenges": [
+      {
+        "title": "Payment Webhooks",
+        "desc": "Handling Stripe webhook events reliably to update order status — including retries and idempotency — required careful signature validation and atomic DB transactions."
+      },
+      {
+        "title": "Inventory Concurrency",
+        "desc": "Preventing overselling when multiple users check out the same product simultaneously was solved with Django's select_for_update() row locking."
+      }
+    ],
+    "related": ["devflow", "zenith"]
+  },
+
+  {
+    "id": "portfoliocms",
+    "title": "PortfolioCMS",
+    "tagline": "A dynamic portfolio content management system where users can manage projects, blogs, and skills via a beautiful React admin UI backed by Firebase.",
+    "category": "Frontend",
+    "categoryIcon": "bi-window",
+    "image": "images/project_apex.png",
+    "about": "PortfolioCMS is a headless CMS purpose-built for developer portfolios. The admin interface is built in React with a clean dashboard where you can add, edit, or delete projects, blog posts, and skill entries — all stored in Firebase Firestore. The public-facing portfolio reads from the same Firestore collection and updates in real-time without re-deployment. Firebase Auth controls admin access and Cloudinary handles image uploads.",
+    "features": [
+      "Drag-and-drop project reordering",
+      "Rich text blog editor with image uploads",
+      "Skill proficiency manager with live preview",
+      "Real-time Firestore sync — no re-deploys needed",
+      "Firebase Auth protected admin routes",
+      "Cloudinary image storage and optimization",
+      "SEO metadata editor per project/blog",
+      "Dark/light mode toggle"
+    ],
+    "tech": [
+      { "name": "React.js",    "icon": "bi-cpu",           "color": "#61dafb" },
+      { "name": "Firebase",    "icon": "bi-cloud-fill",    "color": "#ffca28" },
+      { "name": "Firestore",   "icon": "bi-database-fill", "color": "#ff6c37" },
+      { "name": "Cloudinary",  "icon": "bi-image-fill",    "color": "#3448c5" },
+      { "name": "Tailwind CSS","icon": "bi-palette-fill",  "color": "#38bdf8" },
+      { "name": "React DnD",   "icon": "bi-grip-vertical", "color": "#6366f1" }
+    ],
+    "meta": {
+      "year": "2023",
+      "type": "CMS / Frontend App",
+      "role": "Solo Developer",
+      "duration": "1.5 Months",
+      "status": "Live",
+      "github": "https://github.com/chaitanya-295",
+      "live": "#"
+    },
+    "challenges": [
+      {
+        "title": "Optimistic UI Updates",
+        "desc": "Making the admin feel instant while Firestore writes complete in background required an optimistic update pattern with rollback on error."
+      },
+      {
+        "title": "Image Lazy Loading",
+        "desc": "Implementing progressive image loading with Cloudinary's transformation API reduced page LCP by over 40%."
+      }
+    ],
+    "related": ["devflow", "apex"]
+  },
+
+  {
+    "id": "healthpulse",
+    "title": "HealthPulse",
+    "tagline": "A patient health monitoring dashboard with real-time vitals, appointment scheduling, and PDF report generation — built with React and Node.js.",
+    "category": "Dashboard",
+    "categoryIcon": "bi-heart-pulse-fill",
+    "image": "images/project_zenith.png",
+    "about": "HealthPulse is a healthcare admin dashboard designed for clinics and small hospitals. It provides a unified view of patient vitals (blood pressure, heart rate, SpO2), an appointment scheduler with calendar view, and one-click PDF report generation. The backend is a Node.js/Express REST API connected to MongoDB. Chart.js renders live vitals that update via polling every 30 seconds. Role-based access distinguishes between doctor and admin views.",
+    "features": [
+      "Real-time vitals monitoring with threshold alerts",
+      "Calendar-based appointment scheduling",
+      "Patient profile management with medical history",
+      "One-click PDF report generation (jsPDF)",
+      "Role-based access — Doctor vs Admin views",
+      "REST API with Express.js and JWT auth",
+      "Responsive Chart.js visualizations",
+      "Email reminders for upcoming appointments"
+    ],
+    "tech": [
+      { "name": "React.js",   "icon": "bi-cpu",                    "color": "#61dafb" },
+      { "name": "Node.js",    "icon": "bi-server",                 "color": "#339933" },
+      { "name": "Express.js", "icon": "bi-lightning-fill",         "color": "#828282" },
+      { "name": "MongoDB",    "icon": "bi-database-fill",          "color": "#47a248" },
+      { "name": "Chart.js",   "icon": "bi-bar-chart-fill",         "color": "#ff6384" },
+      { "name": "jsPDF",      "icon": "bi-file-earmark-pdf-fill",  "color": "#e63946" },
+      { "name": "JWT",        "icon": "bi-shield-lock-fill",       "color": "#f59e0b" }
+    ],
+    "meta": {
+      "year": "2024",
+      "type": "Healthcare Dashboard",
+      "role": "Full Stack Developer",
+      "duration": "3 Months",
+      "status": "Live",
+      "github": "https://github.com/chaitanya-295",
+      "live": "#"
+    },
+    "challenges": [
+      {
+        "title": "HIPAA-style Data Privacy",
+        "desc": "Designing the data model to allow granular per-patient access control while keeping API responses performant required a carefully structured permission layer."
+      },
+      {
+        "title": "PDF Generation at Scale",
+        "desc": "Generating complex multi-page PDF reports client-side without blocking the UI was solved by offloading jsPDF work to a Web Worker."
+      }
+    ],
+    "related": ["zenith", "devflow"]
+  }
+]

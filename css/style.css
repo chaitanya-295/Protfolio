@@ -2005,8 +2005,13 @@ section[id] {
   }
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
+/* ==========================================
+ * COMPREHENSIVE MOBILE & TABLET RESPONSIVENESS
+ * ========================================== */
+
+/* --- Tablet Devices (max-width: 992px) --- */
+@media (max-width: 992px) {
+  /* Collapse winding timeline into a straight vertical timeline on tablets */
   .prof-road-svg-wrap {
     display: none;
   }
@@ -2047,5 +2052,143 @@ section[id] {
     margin-left: 15px !important;
     margin-right: 0 !important;
     max-width: 100%;
+  }
+
+  /* Core specializations grid adjustments */
+  .spec-card {
+    margin-bottom: 10px;
+  }
+}
+
+/* --- Mobile Devices (max-width: 768px) --- */
+@media (max-width: 768px) {
+  /* Global section spacing */
+  .section-padding {
+    padding: 50px 0;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Home Page Hero Section */
+  .hero-section {
+    padding: 110px 0 50px 0;
+  }
+
+  .hero-title {
+    font-size: 2.1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+    max-width: 100%;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 25px;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-avatar {
+    max-width: 280px;
+  }
+
+  .glass-stats-card {
+    max-width: 100%;
+    margin-top: 15px;
+  }
+
+  /* About Section Card */
+  .about-avatar {
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+    transform: none !important;
+    max-width: 140px;
+    height: auto !important;
+    margin: 0 auto 20px auto !important;
+    display: block;
+  }
+
+  .about-card {
+    padding: 24px 20px !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  /* Force single column layout for details grid to prevent text/email overflow */
+  .about-details-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.85rem !important;
+  }
+
+  /* CTA Banner responsiveness */
+  .cta-banner-wrapper {
+    padding: 30px 20px !important;
+    text-align: center;
+  }
+
+  .cta-banner-wrapper h2 {
+    font-size: 1.8rem !important;
+  }
+
+  .btn-cta-services {
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* Footer responsiveness */
+  .footer {
+    padding: 50px 0 30px;
+  }
+
+  .footer-logo {
+    display: block;
+    text-align: center;
+  }
+
+  .footer-description {
+    text-align: center;
+    padding-right: 0 !important;
+  }
+
+  .footer-socials-grid {
+    justify-content: center;
+  }
+
+  .footer-heading {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .footer-links {
+    text-align: center;
+  }
+
+  .footer-contact-info {
+    text-align: center;
+  }
+
+  .footer-contact-info li {
+    justify-content: center;
+  }
+
+  .footer-copyright,
+  .footer-credits {
+    text-align: center !important;
+    margin-top: 10px;
   }
 }

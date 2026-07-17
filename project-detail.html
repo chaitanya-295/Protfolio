@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Detail | Chaitanya Kamble</title>
+
+  <!-- SEO Meta Tags — updated dynamically by JS -->
+  <meta name="description" content="Detailed case study of a project by Chaitanya Kamble — Full Stack Web Developer.">
+  <meta name="author" content="Chaitanya Kamble">
+
+  <!-- Favicons -->
+  <link href="images/favicon.jpeg" rel="icon">
+
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=1.1">
+
+  <style>
+    /* ==========================================
+     * PROJECT DETAIL PAGE — STYLES
+     * ========================================== */
+
+    /* --- Hero Banner --- */
+    .detail-hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1a1035 55%, #0f172a 100%);
+      padding: 110px 0 70px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .detail-hero-orb {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    /* Breadcrumb */
+    .detail-breadcrumb .breadcrumb-item a {
+      color: rgba(255,255,255,0.5);
+      font-size: 0.85rem;
+      text-decoration: none;
+    }
+    .detail-breadcrumb .breadcrumb-item.active { color: rgba(255,255,255,0.85); font-size: 0.85rem; }
+    .detail-breadcrumb .breadcrumb-item + .breadcrumb-item::before { color: rgba(255,255,255,0.3); }
+
+    .detail-category-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(99,102,241,0.15);
+      border: 1px solid rgba(99,102,241,0.35);
+      color: #a5b4fc;
+      padding: 5px 16px;
+      border-radius: 50px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .detail-hero-title {
+      font-size: 3.2rem;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+    }
+
+    .detail-hero-subtitle {
+      color: rgba(255,255,255,0.6);
+      font-size: 1.05rem;
+      line-height: 1.75;
+      max-width: 580px;
+    }
+
+    /* Meta pills row */
+    .detail-meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .detail-meta-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 50px;
+      padding: 8px 18px;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.8);
+      font-weight: 500;
+    }
+
+    .detail-meta-pill i { color: #a78bfa; }
+
+    /* Hero action buttons */
+    .detail-hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 36px;
+    }
+
+    .btn-detail-primary {
+      background: #6366f1;
+      color: #fff;
+      padding: 13px 30px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.92rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      border: 2px solid #6366f1;
+    }
+
+    .btn-detail-primary:hover {
+      background: #4f46e5;
+      border-color: #4f46e5;
+      color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(99,102,241,0.35);
+    }
+
+    .btn-detail-outline {
+      background: transparent;
+      color: #fff;
+      padding: 13px 30px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.92rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+
+    .btn-detail-outline:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.6);
+      color: #fff;
+      transform: translateY(-3px);
+    }
+
+    /* --- Main Body --- */
+    .detail-body { background: #f8fafc; padding: 72px 0; }
+
+    /* --- Hero Project Image --- */
+    .detail-hero-image {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.25);
+      border: 1px solid rgba(255,255,255,0.08);
+      margin-top: 60px;
+    }
+
+    .detail-hero-image img {
+      width: 100%;
+      max-height: 480px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* --- Section Titles --- */
+    .detail-section-title {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .detail-section-title::after {
+      content: '';
+      flex: 1;
+      height: 1.5px;
+      background: linear-gradient(to right, #e2e8f0, transparent);
+    }
+
+    /* --- Content Card --- */
+    .detail-card {
+      background: #ffffff;
+      border: 1.5px solid #f1f5f9;
+      border-radius: 20px;
+      padding: 32px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.03);
+      height: 100%;
+    }
+
+    .detail-card p { color: #4b5563; font-size: 0.95rem; line-height: 1.8; margin-bottom: 0; }
+
+    /* --- Feature List --- */
+    .feature-list { list-style: none; padding: 0; margin: 0; }
+    .feature-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 0;
+      color: #334155;
+      font-size: 0.9rem;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .feature-list li:last-child { border-bottom: none; }
+    .feature-list li i { color: #6366f1; font-size: 0.9rem; margin-top: 2px; flex-shrink: 0; }
+
+    /* --- Tech Stack Grid --- */
+    .tech-stack-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tech-stack-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: #f8fafc;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 50px;
+      padding: 7px 16px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #334155;
+      transition: all 0.3s ease;
+    }
+
+    .tech-stack-chip:hover {
+      border-color: #6366f1;
+      color: #6366f1;
+      background: rgba(99,102,241,0.06);
+      transform: translateY(-2px);
+    }
+
+    .tech-stack-chip i { font-size: 1rem; }
+
+    /* --- Sidebar Info Card --- */
+    .sidebar-info-card {
+      background: #ffffff;
+      border: 1.5px solid #f1f5f9;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.03);
+      position: sticky;
+      top: 90px;
+    }
+
+    .sidebar-info-header {
+      background: linear-gradient(135deg, #0f172a, #1e1b4b);
+      padding: 24px 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sidebar-info-header::before {
+      content: '';
+      position: absolute;
+      top: -30px; right: -30px;
+      width: 120px; height: 120px;
+      background: radial-gradient(circle, rgba(99,102,241,0.25), transparent 70%);
+      border-radius: 50%;
+    }
+
+    .sidebar-info-header h5 {
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .sidebar-info-header p {
+      color: rgba(255,255,255,0.55);
+      font-size: 0.8rem;
+      margin: 4px 0 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .sidebar-info-body { padding: 24px 28px; }
+
+    .sidebar-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 13px 0;
+      border-bottom: 1px solid #f1f5f9;
+      gap: 16px;
+    }
+
+    .sidebar-row:last-child { border-bottom: none; }
+
+    .sidebar-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      flex-shrink: 0;
+    }
+
+    .sidebar-value {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #0f172a;
+      text-align: right;
+    }
+
+    .sidebar-value.status-live {
+      color: #059669;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #059669;
+      animation: pulse-green 1.5s ease infinite;
+    }
+
+    @keyframes pulse-green {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(5,150,105,0.4); }
+      50% { box-shadow: 0 0 0 6px rgba(5,150,105,0); }
+    }
+
+    /* Sidebar CTA buttons */
+    .sidebar-cta { padding: 0 28px 24px; }
+
+    .btn-sidebar-primary {
+      background: #6366f1;
+      color: #fff;
+      border: 2px solid #6366f1;
+      border-radius: 12px;
+      padding: 11px 20px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+      margin-bottom: 10px;
+    }
+
+    .btn-sidebar-primary:hover {
+      background: #4f46e5;
+      border-color: #4f46e5;
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(99,102,241,0.3);
+    }
+
+    .btn-sidebar-outline {
+      background: transparent;
+      color: #334155;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 11px 20px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-sidebar-outline:hover {
+      border-color: #0f172a;
+      background: #0f172a;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* --- Challenges / Learnings --- */
+    .challenge-item {
+      background: #f8fafc;
+      border-left: 3px solid #6366f1;
+      border-radius: 0 12px 12px 0;
+      padding: 14px 18px;
+      margin-bottom: 12px;
+    }
+
+    .challenge-item:last-child { margin-bottom: 0; }
+    .challenge-item p { font-size: 0.88rem; color: #334155; margin: 0; line-height: 1.65; }
+    .challenge-item strong { color: #0f172a; }
+
+
+    /* --- Related Projects --- */
+    .related-card {
+      background: #fff;
+      border: 1.5px solid #f1f5f9;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      text-decoration: none;
+      display: block;
+    }
+
+    .related-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(99,102,241,0.2);
+      box-shadow: 0 16px 40px rgba(99,102,241,0.1);
+    }
+
+    .related-card-img {
+      height: 150px;
+      overflow: hidden;
+      background: #f1f5f9;
+    }
+
+    .related-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+    .related-card:hover .related-card-img img { transform: scale(1.06); }
+
+    .related-card-body { padding: 16px 18px; }
+    .related-card-title { font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-bottom: 4px; }
+    .related-card-sub { font-size: 0.78rem; color: #94a3b8; }
+
+    /* --- CTA Section --- */
+    .detail-cta {
+      background: linear-gradient(135deg, #0f172a, #1e1b4b);
+      border-radius: 24px;
+      padding: 52px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      margin-top: 64px;
+    }
+
+    .detail-cta::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 250px; height: 250px;
+      background: radial-gradient(circle, rgba(99,102,241,0.2), transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .detail-cta h2 { color: #fff; font-size: 1.9rem; font-weight: 800; margin-bottom: 12px; }
+    .detail-cta p { color: rgba(255,255,255,0.6); max-width: 440px; margin: 0 auto 28px; }
+
+
+    /* --- Not Found State --- */
+    .project-not-found {
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .project-not-found i { font-size: 4rem; color: #e2e8f0; margin-bottom: 16px; }
+    .project-not-found h2 { color: #0f172a; }
+    .project-not-found p { color: #94a3b8; }
+
+    /* --- Reveal animation --- */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.65s ease, transform 0.65s cubic-bezier(0.16,1,0.3,1); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* --- Responsive --- */
+    @media (max-width: 991px) {
+      .detail-hero-title { font-size: 2.2rem; }
+      .sidebar-info-card { position: static; }
+    }
+
+    @media (max-width: 768px) {
+      .detail-hero { padding: 90px 0 50px; }
+      .detail-card { padding: 22px; }
+      .detail-cta { padding: 36px 20px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app-wrapper">
+
+    <!-- ==========================================
+     * NAVIGATION BAR
+     * ========================================== -->
+    <nav class="navbar navbar-expand-lg sticky-top custom-navbar">
+      <div class="container">
+        <a class="navbar-brand navbar-logo" href="index.html" id="logoLink">
+          <span>&lt;/&gt;</span> Chaitanya
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">
+            <span class="navbar-toggler-span"></span>
+          </span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item"><a class="nav-link custom-nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link custom-nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link custom-nav-link" href="skills.html">Skills</a></li>
+            <li class="nav-item"><a class="nav-link custom-nav-link" href="works.html">Works</a></li>
+            <li class="nav-item"><a class="nav-link custom-nav-link" href="experience.html">Experience</a></li>
+            <li class="nav-item"><a class="nav-link custom-nav-link" href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="navbar-socials border-start ps-3 d-none d-lg-flex">
+          <a href="https://github.com/chaitanya-295" target="_blank" class="social-nav-icon"><i class="bi bi-github"></i></a>
+          <a href="https://www.linkedin.com/in/chaitanyakamble29" target="_blank" class="social-nav-icon"><i class="bi bi-linkedin"></i></a>
+          <a href="mailto:chaitanyakamble2005@gmail.com" class="social-nav-icon"><i class="bi bi-envelope-fill"></i></a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ==========================================
+     * HERO — Dynamically populated
+     * ========================================== -->
+    <section class="detail-hero" id="detail-hero">
+      <div class="detail-hero-orb" style="width:380px;height:380px;top:-120px;left:-100px;background:radial-gradient(circle,rgba(99,102,241,0.12),transparent 70%);"></div>
+      <div class="detail-hero-orb" style="width:240px;height:240px;bottom:-60px;right:0;background:radial-gradient(circle,rgba(139,92,246,0.1),transparent 70%);"></div>
+
+      <div class="container position-relative" style="z-index:2;">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb detail-breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="works.html">Works</a></li>
+            <li class="breadcrumb-item active" id="bc-project-name" aria-current="page">Project</li>
+          </ol>
+        </nav>
+
+        <div class="row align-items-center g-5 mt-1">
+          <div class="col-lg-8">
+            <div id="hero-category-badge" class="detail-category-badge mb-3 d-inline-flex"></div>
+            <h1 class="detail-hero-title mb-3" id="hero-title">—</h1>
+            <p class="detail-hero-subtitle" id="hero-tagline">—</p>
+
+            <!-- Meta pills -->
+            <div class="detail-meta-row" id="hero-meta-row"></div>
+
+            <!-- Action buttons -->
+            <div class="detail-hero-actions" id="hero-actions"></div>
+          </div>
+
+          <div class="col-lg-4 d-none d-lg-flex justify-content-end">
+            <!-- Sidebar mini stat card in hero -->
+            <div style="background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:20px; padding:28px 24px; width:100%; max-width:280px; backdrop-filter:blur(12px);">
+              <p style="color:rgba(255,255,255,0.5); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.08em; font-weight:600; margin-bottom:18px;">Project at a Glance</p>
+              <div id="hero-glance-items"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Full-width project screenshot -->
+        <div class="detail-hero-image" id="hero-image-wrap">
+          <img id="hero-image" src="" alt="Project Screenshot">
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+     * MAIN CONTENT BODY
+     * ========================================== -->
+    <div class="detail-body" id="detail-body">
+      <div class="container">
+
+        <!-- Project not found state -->
+        <div class="project-not-found d-none" id="not-found">
+          <i class="bi bi-folder-x d-block"></i>
+          <h2 class="mt-2">Project Not Found</h2>
+          <p class="mt-2">The project you're looking for doesn't exist or the URL is incorrect.</p>
+          <a href="works.html" class="btn-detail-primary d-inline-flex mt-4">
+            <i class="bi bi-arrow-left"></i> Back to Works
+          </a>
+        </div>
+
+        <div id="project-content">
+          <div class="row g-4">
+
+            <!-- Left / Main Column -->
+            <div class="col-lg-8">
+
+              <!-- About the Project -->
+              <div class="reveal mb-4">
+                <div class="detail-section-title"><i class="bi bi-info-circle-fill text-indigo" style="color:#6366f1;"></i> About the Project</div>
+                <div class="detail-card">
+                  <p id="about-text">—</p>
+                </div>
+              </div>
+
+              <!-- Key Features -->
+              <div class="reveal mb-4">
+                <div class="detail-section-title"><i class="bi bi-lightning-charge-fill" style="color:#6366f1;"></i> Key Features</div>
+                <div class="detail-card">
+                  <ul class="feature-list" id="features-list"></ul>
+                </div>
+              </div>
+
+
+
+              <!-- Challenges & Learnings -->
+              <div class="reveal mb-4">
+                <div class="detail-section-title"><i class="bi bi-patch-check-fill" style="color:#6366f1;"></i> Challenges &amp; Learnings</div>
+                <div id="challenges-list"></div>
+              </div>
+
+            </div>
+
+            <!-- Right / Sidebar Column -->
+            <div class="col-lg-4">
+              <!-- Sidebar: Project Details -->
+              <div class="reveal mb-4">
+                <div class="sidebar-info-card">
+                  <div class="sidebar-info-header">
+                    <h5>Project Details</h5>
+                    <p>Key information at a glance</p>
+                  </div>
+                  <div class="sidebar-info-body" id="sidebar-info-body"></div>
+                  <div class="sidebar-cta" id="sidebar-cta"></div>
+                </div>
+              </div>
+
+              <!-- Sidebar: Tech Stack -->
+              <div class="reveal">
+                <div class="sidebar-info-card">
+                  <div class="sidebar-info-header">
+                    <h5>Tech Stack</h5>
+                    <p>Technologies used in this project</p>
+                  </div>
+                  <div style="padding: 24px;">
+                    <div class="tech-stack-grid" id="tech-stack-grid"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+          <!-- CTA Banner -->
+          <div class="detail-cta reveal" id="detail-cta">
+            <div style="font-size:2.2rem; margin-bottom:16px;">&#128640;</div>
+            <h2>Like what you see?</h2>
+            <p>I'm open to collaboration and freelance opportunities. Let's build something amazing together.</p>
+            <div class="d-flex gap-3 justify-content-center flex-wrap">
+              <a href="index.html#contact" class="btn-detail-primary">
+                <i class="bi bi-envelope-fill"></i> Hire Me
+              </a>
+              <a href="works.html" class="btn-detail-outline">
+                <i class="bi bi-arrow-left"></i> More Projects
+              </a>
+            </div>
+          </div>
+
+          <!-- Related Projects -->
+          <div class="mt-5 reveal" id="related-section">
+            <div class="detail-section-title mb-4"><i class="bi bi-grid-3x3-gap-fill" style="color:#6366f1;"></i> More Projects</div>
+            <div class="row g-3" id="related-grid"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==========================================
+     * FOOTER
+     * ========================================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row g-4 mb-5">
+          <div class="col-lg-4 text-start">
+            <a class="footer-logo mb-3 d-inline-block" href="index.html"><span>&lt;/&gt;</span> Chaitanya</a>
+            <p class="footer-description pe-lg-4">Building modern, responsive, and user-focused web applications. Let's create something great together.</p>
+            <div class="footer-socials-grid mt-4">
+              <a href="https://github.com/chaitanya-295" target="_blank" class="footer-social-icon-v3" title="GitHub"><i class="bi bi-github"></i></a>
+              <a href="https://www.linkedin.com/in/chaitanyakamble29" target="_blank" class="footer-social-icon-v3" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="mailto:chaitanyakamble2005@gmail.com" class="footer-social-icon-v3" title="Email"><i class="bi bi-envelope-fill"></i></a>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 text-start ps-lg-5 mb-4 mb-sm-0">
+            <h4 class="footer-heading mb-4">Quick Links</h4>
+            <ul class="list-unstyled footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Me</a></li>
+              <li><a href="skills.html">Tech Skills</a></li>
+              <li><a href="works.html">My Work</a></li>
+              <li><a href="experience.html">Experience</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 text-start">
+            <h4 class="footer-heading mb-4">Contact Info</h4>
+            <ul class="list-unstyled footer-contact-info">
+              <li class="d-flex align-items-start gap-2 mb-3">
+                <i class="bi bi-envelope-fill text-accent"></i>
+                <a href="mailto:chaitanyakamble2005@gmail.com" class="text-decoration-none">chaitanyakamble2005@gmail.com</a>
+              </li>
+              <li class="d-flex align-items-start gap-2 mb-3">
+                <i class="bi bi-phone-fill text-accent"></i><span>+91 97305 93429</span>
+              </li>
+              <li class="d-flex align-items-start gap-2 mb-3">
+                <i class="bi bi-geo-alt-fill text-accent"></i><span>Pune, Maharashtra, India</span>
+              </li>
+              <li class="d-flex align-items-start gap-2">
+                <i class="bi bi-briefcase-fill text-accent"></i>
+                <span class="text-success-custom">Available for Projects</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr class="footer-divider mb-4">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-start mb-3 mb-md-0">
+            <p class="footer-copyright mb-0">&copy; <span id="copyrightYear">2026</span> Chaitanya Kamble. All Rights Reserved.</p>
+          </div>
+          <div class="col-md-6 text-start text-md-end">
+            <p class="footer-credits mb-0">Designed with <i class="bi bi-heart-fill text-danger mx-1"></i> &middot; Frontend Developer</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-watermark">Chaitanya</div>
+    </footer>
+
+  </div>
+
+
+  </div>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // ==========================================
+    // LOAD PROJECT DATA FROM data/projects.json
+    // ==========================================
+
+    // Navbar scroll — runs immediately, no data needed
+    const navbar = document.querySelector('.custom-navbar');
+    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 40));
+    document.getElementById('copyrightYear').textContent = new Date().getFullYear();
+
+    // Read project ID from URL
+    const params = new URLSearchParams(window.location.search);
+    const projectId = (params.get('id') || '').toLowerCase();
+
+    // Fetch projects.json then render
+    fetch('data/projects.json')
+      .then(res => {
+        if (!res.ok) throw new Error('Failed to load projects.json');
+        return res.json();
+      })
+      .then(projectsArray => {
+        // Convert array → keyed object  { "devflow": {...}, "apex": {...}, ... }
+        const PROJECTS = {};
+        projectsArray.forEach(p => { PROJECTS[p.id] = p; });
+
+        const project = PROJECTS[projectId];
+
+        // Show not-found state if ID doesn't match any project
+        if (!project) {
+          document.getElementById('detail-hero').style.display = 'none';
+          document.getElementById('project-content').classList.add('d-none');
+          document.getElementById('not-found').classList.remove('d-none');
+          return;
+        }
+
+        // ==========================================
+        // RENDER PAGE
+        // ==========================================
+
+        document.title = `${project.title} | Chaitanya Kamble`;
+        document.querySelector('meta[name="description"]').setAttribute('content', project.tagline);
+        document.getElementById('bc-project-name').textContent = project.title;
+
+        // --- Hero ---
+        document.getElementById('hero-category-badge').innerHTML =
+          `<i class="bi ${project.categoryIcon}"></i> ${project.category}`;
+        document.getElementById('hero-title').textContent = project.title;
+        document.getElementById('hero-tagline').textContent = project.tagline;
+        document.getElementById('hero-image').src = project.image;
+        document.getElementById('hero-image').alt = `${project.title} Screenshot`;
+
+        // Hero meta pills
+        const metaItems = [
+          { icon: 'bi-calendar3',   text: project.meta.year },
+          { icon: 'bi-tag-fill',    text: project.meta.type },
+          { icon: 'bi-person-fill', text: project.meta.role },
+          { icon: 'bi-clock-fill',  text: project.meta.duration },
+        ];
+        document.getElementById('hero-meta-row').innerHTML = metaItems.map(m =>
+          `<div class="detail-meta-pill"><i class="bi ${m.icon}"></i> ${m.text}</div>`
+        ).join('');
+
+        // Hero action buttons
+        document.getElementById('hero-actions').innerHTML = `
+          <a href="${project.meta.live}" class="btn-detail-primary" ${project.meta.live !== '#' ? 'target="_blank"' : ''}>
+            <i class="bi bi-box-arrow-up-right"></i> Live Demo
+          </a>
+          <a href="${project.meta.github}" target="_blank" class="btn-detail-outline">
+            <i class="bi bi-github"></i> Source Code
+          </a>
+        `;
+
+        // Hero "at a glance" mini card
+        document.getElementById('hero-glance-items').innerHTML = [
+          { label: 'Year',     value: project.meta.year },
+          { label: 'Type',     value: project.meta.type },
+          { label: 'Duration', value: project.meta.duration },
+          { label: 'Status',   value: project.meta.status },
+        ].map(r => `
+          <div style="display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,0.07);padding:10px 0;">
+            <span style="font-size:0.75rem;color:rgba(255,255,255,0.45);font-weight:600;">${r.label}</span>
+            <span style="font-size:0.82rem;color:#fff;font-weight:600;">${r.value}</span>
+          </div>
+        `).join('');
+
+        // --- About ---
+        document.getElementById('about-text').textContent = project.about;
+
+        // --- Key Features ---
+        document.getElementById('features-list').innerHTML = project.features.map(f =>
+          `<li><i class="bi bi-check-circle-fill"></i> ${f}</li>`
+        ).join('');
+
+        // --- Tech Stack (sidebar card) ---
+        document.getElementById('tech-stack-grid').innerHTML = project.tech.map(t =>
+          `<span class="tech-stack-chip"><i class="bi ${t.icon}" style="color:${t.color};"></i> ${t.name}</span>`
+        ).join('');
+
+        // --- Challenges & Learnings ---
+        document.getElementById('challenges-list').innerHTML = project.challenges.map(c =>
+          `<div class="challenge-item">
+            <p><strong>${c.title}: </strong>${c.desc}</p>
+          </div>`
+        ).join('');
+
+        // --- Sidebar: Project Details rows ---
+        const sidebarRows = [
+          { label: 'Year',         value: project.meta.year },
+          { label: 'Project Type', value: project.meta.type },
+          { label: 'My Role',      value: project.meta.role },
+          { label: 'Duration',     value: project.meta.duration },
+          { label: 'Status',       value: project.meta.status, isStatus: true },
+        ];
+        document.getElementById('sidebar-info-body').innerHTML = sidebarRows.map(r => `
+          <div class="sidebar-row">
+            <span class="sidebar-label">${r.label}</span>
+            <span class="sidebar-value ${r.isStatus ? 'status-live' : ''}">
+              ${r.isStatus ? '<span class="status-dot"></span>' : ''} ${r.value}
+            </span>
+          </div>
+        `).join('');
+
+        // --- Sidebar: CTA buttons ---
+        document.getElementById('sidebar-cta').innerHTML = `
+          <a href="${project.meta.live}" class="btn-sidebar-primary" ${project.meta.live !== '#' ? 'target="_blank"' : ''}>
+            <i class="bi bi-box-arrow-up-right"></i> View Live Project
+          </a>
+          <a href="${project.meta.github}" target="_blank" class="btn-sidebar-outline">
+            <i class="bi bi-github"></i> Source on GitHub
+          </a>
+        `;
+
+        // --- Related Projects ---
+        const relatedProjects = (project.related || []).map(id => PROJECTS[id]).filter(Boolean);
+        document.getElementById('related-grid').innerHTML = relatedProjects.map(rp =>
+          `<div class="col-sm-6 col-md-4">
+            <a href="project-detail.html?id=${rp.id}" class="related-card">
+              <div class="related-card-img">
+                <img src="${rp.image}" alt="${rp.title}" loading="lazy">
+              </div>
+              <div class="related-card-body">
+                <div class="related-card-title">${rp.title}</div>
+                <div class="related-card-sub">${rp.category}</div>
+              </div>
+            </a>
+          </div>`
+        ).join('');
+
+        // ==========================================
+        // SCROLL REVEAL
+        // ==========================================
+        const revealObs = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              revealObs.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+      })
+      .catch(err => {
+        // Fetch failed — show not-found state
+        console.error('Error loading projects.json:', err);
+        document.getElementById('detail-hero').style.display = 'none';
+        document.getElementById('project-content').classList.add('d-none');
+        document.getElementById('not-found').classList.remove('d-none');
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Skills | Chaitanya Kamble</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Explore the technical skills of Chaitanya Kamble – Frontend, Backend, Databases, DevTools and more. Full Stack Web Developer and Computer Engineering Student.">
+  <meta name="keywords"
+    content="Chaitanya Kamble, Tech Skills, Frontend, Backend, React, Node.js, Python, Django, MongoDB, MySQL, Portfolio">
+  <meta name="author" content="Chaitanya Kamble">
+
+  <!-- Favicons -->
+  <link href="images/favicon.jpeg" rel="icon">
+
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=1.1">
+
+  <style>
+    /* ==========================================
+     * SKILLS PAGE — ADDITIONAL STYLES
+     * ========================================== */
+
+    /* --- Page Hero Banner --- */
+    .skills-hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+      padding: 120px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .skills-hero-title {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+    }
+
+    .skills-hero-title span {
+      background: linear-gradient(135deg, #6366f1, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .skills-hero-sub {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 1.1rem;
+      max-width: 540px;
+      margin: 0 auto;
+      line-height: 1.75;
+    }
+
+    .skills-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(99, 102, 241, 0.15);
+      border: 1px solid rgba(99, 102, 241, 0.35);
+      color: #a5b4fc;
+      padding: 6px 18px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    /* --- Breadcrumb --- */
+    .skills-breadcrumb {
+      background: transparent;
+      padding: 0;
+    }
+
+    .skills-breadcrumb .breadcrumb-item a {
+      color: rgba(255,255,255,0.55);
+      font-size: 0.88rem;
+    }
+
+    .skills-breadcrumb .breadcrumb-item.active {
+      color: rgba(255,255,255,0.9);
+      font-size: 0.88rem;
+    }
+
+    .skills-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+      color: rgba(255,255,255,0.3);
+    }
+
+    /* --- Stat Pills in Hero --- */
+    .hero-stat-pills {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .hero-stat-pill {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(10px);
+      border-radius: 50px;
+      padding: 10px 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+    }
+
+    .hero-stat-pill i {
+      color: #a78bfa;
+      font-size: 1.1rem;
+    }
+
+    .hero-stat-pill strong {
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .hero-stat-pill span {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.55);
+      font-weight: 400;
+    }
+
+    /* --- Section Wrapper --- */
+    .skills-page-body {
+      background: #f8fafc;
+      padding: 80px 0;
+    }
+
+    /* --- Category Filter Tabs --- */
+    .skill-filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 56px;
+    }
+
+    .skill-filter-btn {
+      padding: 9px 22px;
+      border-radius: 50px;
+      border: 1.5px solid #e2e8f0;
+      background: #ffffff;
+      color: #64748b;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      font-family: 'Outfit', sans-serif;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .skill-filter-btn:hover {
+      border-color: #6366f1;
+      color: #6366f1;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(99, 102, 241, 0.12);
+    }
+
+    .skill-filter-btn.active {
+      background: #6366f1;
+      border-color: #6366f1;
+      color: #ffffff;
+      box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+    }
+
+    .skill-filter-btn i {
+      font-size: 0.85rem;
+    }
+
+    /* --- Category Section Header --- */
+    .skill-category-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .skill-category-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      flex-shrink: 0;
+    }
+
+    .skill-category-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .skill-category-count {
+      font-size: 0.8rem;
+      color: #94a3b8;
+      font-weight: 500;
+      background: #f1f5f9;
+      border-radius: 50px;
+      padding: 3px 10px;
+    }
+
+    .skill-category-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, #e2e8f0, transparent);
+    }
+
+    /* --- Skill Card --- */
+    .skill-card {
+      background: #ffffff;
+      border: 1.5px solid #f1f5f9;
+      border-radius: 20px;
+      padding: 22px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .skill-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--skill-color, #6366f1), var(--skill-color2, #a78bfa));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .skill-card:hover {
+      border-color: rgba(99, 102, 241, 0.2);
+      box-shadow: 0 16px 40px rgba(99, 102, 241, 0.1);
+      transform: translateY(-4px);
+    }
+
+    .skill-card:hover::before {
+      opacity: 1;
+    }
+
+    .skill-icon-wrap {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+      background: var(--skill-bg, #f0f4ff);
+    }
+
+    .skill-info {
+      flex: 1;
+    }
+
+    .skill-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+
+    .skill-level-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .skill-bar-track {
+      height: 6px;
+      background: #f1f5f9;
+      border-radius: 50px;
+      overflow: hidden;
+    }
+
+    .skill-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--skill-color, #6366f1), var(--skill-color2, #a78bfa));
+      border-radius: 50px;
+      width: 0%;
+      transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .skill-bar-fill.animated {
+      width: var(--skill-pct);
+    }
+
+    .skill-pct-text {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #94a3b8;
+      margin-top: 5px;
+      text-align: right;
+    }
+
+    /* --- Category Wrapper for filter --- */
+    .skill-category-block {
+      margin-bottom: 60px;
+    }
+
+    .skill-category-block.hidden {
+      display: none;
+    }
+
+    /* --- Tool Pills --- */
+    .tool-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #ffffff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 50px;
+      padding: 8px 18px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #334155;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .tool-pill:hover {
+      border-color: var(--tool-color, #6366f1);
+      color: var(--tool-color, #6366f1);
+      box-shadow: 0 4px 15px rgba(99, 102, 241, 0.1);
+      transform: translateY(-2px);
+    }
+
+    /* --- Currently Learning Banner --- */
+    .learning-banner {
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+      border-radius: 24px;
+      padding: 48px 40px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 48px;
+    }
+
+    .learning-banner::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 250px;
+      height: 250px;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.2) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .learning-banner h2 {
+      color: #ffffff;
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .learning-banner p {
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 28px;
+    }
+
+    .learning-item {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      padding: 18px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .learning-item:hover {
+      background: rgba(255, 255, 255, 0.12);
+      transform: translateY(-3px);
+    }
+
+    .learning-item-icon {
+      font-size: 1.5rem;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(99, 102, 241, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .learning-item-name {
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.92rem;
+      margin-bottom: 2px;
+    }
+
+    .learning-item-desc {
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 0.75rem;
+    }
+
+    .learning-progress-bar {
+      height: 4px;
+      background: rgba(255,255,255,0.12);
+      border-radius: 50px;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+
+    .learning-progress-fill {
+      height: 100%;
+      border-radius: 50px;
+      background: linear-gradient(90deg, #6366f1, #a78bfa);
+    }
+
+    /* --- CTA Section --- */
+    .skills-cta {
+      background: #ffffff;
+      border: 1.5px solid #f1f5f9;
+      border-radius: 24px;
+      padding: 48px 40px;
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(99, 102, 241, 0.06);
+    }
+
+    .skills-cta h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 12px;
+    }
+
+    .skills-cta p {
+      color: #64748b;
+      max-width: 450px;
+      margin: 0 auto 28px;
+    }
+
+    .btn-skills-primary {
+      background: #6366f1;
+      color: #fff;
+      padding: 14px 32px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      border: 2px solid #6366f1;
+    }
+
+    .btn-skills-primary:hover {
+      background: #4f46e5;
+      border-color: #4f46e5;
+      color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(99, 102, 241, 0.3);
+    }
+
+    .btn-skills-outline {
+      background: transparent;
+      color: #6366f1;
+      padding: 14px 32px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      border: 2px solid #6366f1;
+    }
+
+    .btn-skills-outline:hover {
+      background: #6366f1;
+      color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(99, 102, 241, 0.25);
+    }
+
+    /* --- Scroll Fade-In Animation --- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* --- Floating Orbs --- */
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 768px) {
+      .skills-hero-title { font-size: 2.2rem; }
+      .learning-banner { padding: 32px 20px; }
+      .skills-cta { padding: 36px 20px; }
+      .hero-stat-pills { gap: 10px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app-wrapper">
+
+    <!-- ==========================================
+     * NAVIGATION BAR
+     * ========================================== -->
+    <nav class="navbar navbar-expand-lg sticky-top custom-navbar">
+      <div class="container">
+        <a class="navbar-brand navbar-logo" href="index.html" id="logoLink">
+          <span>&lt;/&gt;</span> Chaitanya
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">
+            <span class="navbar-toggler-span"></span>
+          </span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link active" href="skills.html">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="works.html">Works</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="experience.html">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="index.html#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar-socials border-start ps-3 d-none d-lg-flex">
+          <a href="https://github.com/chaitanya-295" target="_blank" class="social-nav-icon"><i class="bi bi-github"></i></a>
+          <a href="https://www.linkedin.com/in/chaitanyakamble29" target="_blank" class="social-nav-icon"><i class="bi bi-linkedin"></i></a>
+          <a href="mailto:chaitanyakamble2005@gmail.com" class="social-nav-icon"><i class="bi bi-envelope-fill"></i></a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ==========================================
+     * HERO SECTION
+     * ========================================== -->
+    <section class="skills-hero" id="skills-top">
+      <!-- Floating decorative orbs -->
+      <div class="orb" style="width:350px;height:350px;top:-100px;left:-100px;background:radial-gradient(circle,rgba(99,102,241,0.12),transparent 70%);"></div>
+      <div class="orb" style="width:250px;height:250px;bottom:-60px;right:5%;background:radial-gradient(circle,rgba(139,92,246,0.1),transparent 70%);"></div>
+      <div class="orb" style="width:160px;height:160px;top:30%;left:60%;background:radial-gradient(circle,rgba(99,102,241,0.07),transparent 70%);"></div>
+
+      <div class="container text-center position-relative" style="z-index:2;">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb skills-breadcrumb justify-content-center">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Tech Skills</li>
+          </ol>
+        </nav>
+
+        <div class="skills-hero-badge">
+          <i class="bi bi-cpu-fill"></i> Skills &amp; Expertise
+        </div>
+
+        <h1 class="skills-hero-title mb-4">
+          My <span>Technical</span> Arsenal
+        </h1>
+        <p class="skills-hero-sub mx-auto">
+          A curated showcase of the technologies I work with every day — from pixel-perfect frontends to scalable backends and databases.
+        </p>
+
+        <!-- Quick Stats Pills -->
+        <div class="hero-stat-pills">
+          <div class="hero-stat-pill">
+            <i class="bi bi-layers-fill"></i>
+            <div>
+              <strong>17+</strong>
+              <span class="d-block">Technologies</span>
+            </div>
+          </div>
+          <div class="hero-stat-pill">
+            <i class="bi bi-award-fill"></i>
+            <div>
+              <strong>2+</strong>
+              <span class="d-block">Years Coding</span>
+            </div>
+          </div>
+          <div class="hero-stat-pill">
+            <i class="bi bi-folder2-open"></i>
+            <div>
+              <strong>50+</strong>
+              <span class="d-block">Projects Built</span>
+            </div>
+          </div>
+          <div class="hero-stat-pill">
+            <i class="bi bi-graph-up-arrow"></i>
+            <div>
+              <strong>Always</strong>
+              <span class="d-block">Learning</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+     * MAIN SKILLS BODY
+     * ========================================== -->
+    <div class="skills-page-body">
+      <div class="container">
+
+        <!-- Filter Bar -->
+        <div class="skill-filter-bar reveal" id="filterBar">
+          <button class="skill-filter-btn active" data-target="all" id="filter-all">
+            <i class="bi bi-grid-fill"></i> All Skills
+          </button>
+          <button class="skill-filter-btn" data-target="frontend" id="filter-frontend">
+            <i class="bi bi-window"></i> Frontend
+          </button>
+          <button class="skill-filter-btn" data-target="backend" id="filter-backend">
+            <i class="bi bi-server"></i> Backend
+          </button>
+          <button class="skill-filter-btn" data-target="database" id="filter-database">
+            <i class="bi bi-database"></i> Database
+          </button>
+          <button class="skill-filter-btn" data-target="tools" id="filter-tools">
+            <i class="bi bi-tools"></i> Dev Tools
+          </button>
+        </div>
+
+        <!-- ===== FRONTEND ===== -->
+        <div class="skill-category-block reveal" data-category="frontend" id="cat-frontend">
+          <div class="skill-category-header">
+            <div class="skill-category-icon" style="background:#eff6ff; color:#3b82f6;">
+              <i class="bi bi-window-stack"></i>
+            </div>
+            <span class="skill-category-title">Frontend Development</span>
+            <span class="skill-category-count">6 Skills</span>
+            <div class="skill-category-line"></div>
+          </div>
+          <div class="row g-3">
+
+            <div class="col-md-6 col-lg-4">
+              <div class="skill-card" style="--skill-color:#e34f26; --skill-color2:#f97316; --skill-bg:#fff4f0;">
+                <div class="skill-icon-wrap"><i class="bi bi-filetype-html" style="color:#e34f26;"></i></div>
+                <div class="skill-info">
+                  <div class="skill-name">HTML5</div>
+                  <div class="skill-level-label" style="color:#e34f26;">Expert</div>
+                  <div class="skill-bar-track">
+                    <div class="skill-bar-fill" style="--skill-pct: 95%; --skill-color:#e34f26; --skill-color2:#f97316;"></div>
+                  </div>
+                  <div class="skill-pct-text">95%</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="skill-card" style="--skill-color:#1572b6; --skill-color2:#38bdf8; --skill-bg:#eff8ff;">
+                <div class="skill-icon-wrap"><i class="bi bi-filetype-css" style="color:#1572b6;"></i></div>
+                <div class="skill-info">
+                  <div class="skill-name">CSS3</div>
+                  <div class="skill-level-label" style="color:#1572b6;">Expert</div>
+                  <div class="skill-bar-track">
+                    <div class="skill-bar-fill" style="--skill-pct: 92%; --skill-color:#1572b6; --skill-color2:#38bdf8;"></div>
+                  </div>
+                  <div class="skill-pct-text">92%</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="skill-card" style="--skill-color:#f59e0b; --skill-color2:#fbbf24; --skill-bg:#fffbeb;">
+                <div class="skill-icon-wrap"><i class="bi bi-filetype-js" style="color:#ca8a04;"></i></div>
+                <div class="skill-info">
+                  <div class="skill-name">JavaScript (ES6+)</div>
+                  <div class="skill-level-label" style="color:#ca8a04;">Advanced</div>
+                  <div class="skill-bar-track">
+                    <div class="skill-bar-fill" style="--skill-pct: 88%; --skill-color:#f59e0b; --skill-color2:#fbbf24;"></div>
+                  </div>
+                  <div class="skill-pct-text">88%</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="skill-card" style="--skill-color:#0ea5e9; --skill-color2:#38bdf8; --skill-bg:#f0fbff;">
+                <div class="skill-icon-wrap"><i class="bi bi-cpu" style="color:#0ea5e9;"></i></div>
+                <div class="skill-info">
+                  <div class="skill-name">React.js</div>
+                  <div class="skill-level-label" style="color:#0ea5e9;">Advanced</div>
+                  <div class="skill-bar-track">
+                    <div class="skill-bar-fill" style="--skill-pct: 85%; --skill-color:#0ea5e9; --skill-color2:#38bdf8;"></div>
+                  </div>
+                  <div class="skill-pct-text">85%</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="skill-card" style="--skill-color:#0284c7; --skill-color2:#7dd3fc; --skill-bg:#f0f9ff;">
+                <div class="skill-icon-wrap"><i class="bi bi-palette-fill" style="color:#0284c7;"></i></div>
+                <div class="skill-info">
+                  <div class="skill-name">Tailwind CSS</div>
+                  <div class="skill-level-label" style="color:#0284c7;">Advanced</div>
+                  <div class="skill-bar-track">
+                    <div class="skill-bar-fill" style="--skill-pct: 87%; --skill-color:#0284c7; --skill-color2:#7dd3fc;"></div>
+                  </div>
+                  <div class="skill-pct-text">87%</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="skill-card" style="--skill-color:#7952b3; --skill-color2:#a78bfa; --skill-bg:#f5f3ff;">
+                <div class="skill-icon-wrap"><i class="bi bi-bootstrap" style="color:#7952b3;"></i></div>
+                <div class="skill-info">
+                  <div class="skill-name">Bootstrap 5</div>
+                  <div class="skill-level-label" style="color:#7952b3;">Advanced</div>
+                  <div class="skill-bar-track">
+                    <div class="skill-bar-fill" style="--skill-pct: 90%; --skill-color:#7952b3; --skill-color2:#a78bfa;"></div>
+                  </div>
+                  <div class="skill-pct-text">90%</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ===== BACKEND ===== -->
+        <div class="skill-category-block reveal" data-category="backend" id="cat-backend">
+          <div class="skill-category-header">
+            <div class="skill-category-icon" style="background:#f0fdf4; color:#22c55e;">
+              <i class="bi bi-hdd-network-fill"></i>
+            </div>
+            <span class="skill-category-title">Backend Development</span>
+            <span class="skill-category-count">5 Skills</span>
+            <div class="skill-category-line"></div>
+          </div>
+          <div class="row g-3">
+
+            <div class="col-md-6 col-lg-4">
+              <div class="skill-card" style="--skill-color:#15803d; --skill-color2:#4ade80; --skill-bg:#f0fdf4;">
+                <div class="skill-icon-wrap"><i class="bi bi-server" style="color:#15803d;"></i></div>
+                <div class="skill-info">
+                  <div class="skill-name">Node.js</div>
+                  <div class="skill-level-label" style="color:#15803d;">Intermediate</div>
+                  <div class="skill-bar-track">
+                    <div class="skill-bar-fill" style="--skill-pct: 78%; --skill-color:#15803d; --skill-color2:#4ade80;"></div>
+                  </div>
+                  <div class="skill-pct-text">78%</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="skill-card" style="--skill-color:#64748b; --skill-color2:#94a3b8; --skill-bg:#f8fafc;">
+                <div class="skill-icon-wrap"><i class="bi bi-lightning-fill" style="color:#64748b;"></i></div>
+                <div class="skill-info">
+                  <div class="skill-name">Express.js</div>
+                  <div class="skill-level-label" style="color:#64748b;">Intermediate</div>
+                  <div class="skill-bar-track">
+                    <div class="skill-bar-fill" style="--skill-pct: 75%; --skill-color:#64748b; --skill-color2:#94a3b8;"></div>
+                  </div>
+                  <div class="skill-pct-text">75%</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="skill-card" style="--skill-color:#059669; --skill-color2:#34d399; --skill-bg:#f0fdf9;">
+                <div class="skill-icon-wrap"><i class="bi bi-file-code" style="color:#059669;"></i></div>
+                <div class="skill-info">
+                  <div class="skill-name">Django</div>
+                  <div class="skill-level-label" style="color:#059669;">Intermediate</div>
+                  <div class="skill-bar-track">
+                    <div class="skill-bar-fill" style="--skill-pct: 72%; --skill-color:#059669; --skill-color2:#34d399;"></div>
+                  </div>
+                  <div class="skill-pct-text">72%</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="skill-card" style="--skill-color:#1d4ed8; --skill-color2:#60a5fa; --skill-bg:#eff6ff;">
+                <div class="skill-icon-wrap"><i class="bi bi-filetype-py" style="color:#1d4ed8;"></i></div>
+                <div class="skill-info">
+                  <div class="skill-name">Python</div>
+                  <div class="skill-level-label" style="color:#1d4ed8;">Advanced</div>
+                  <div class="skill-bar-track">
+                    <div class="skill-bar-fill" style="--skill-pct: 82%; --skill-color:#1d4ed8; --skill-color2:#60a5fa;"></div>
+                  </div>
+                  <div class="skill-pct-text">82%</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="skill-card" style="--skill-color:#00599c; --skill-color2:#60a5fa; --skill-bg:#eff8ff;">
+                <div class="skill-icon-wrap"><i class="bi bi-filetype-cpp" style="color:#00599c;"></i></div>
+                <div class="skill-info">
+                  <div class="skill-name">C++</div>
+                  <div class="skill-level-label" style="color:#00599c;">Intermediate</div>
+                  <div class="skill-bar-track">
+                    <div class="skill-bar-fill" style="--skill-pct: 70%; --skill-color:#00599c; --skill-color2:#60a5fa;"></div>
+                  </div>
+                  <div class="skill-pct-text">70%</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ===== DATABASE ===== -->
+        <div class="skill-category-block reveal" data-category="database" id="cat-database">
+          <div class="skill-category-header">
+            <div class="skill-category-icon" style="background:#fff7ed; color:#f97316;">
+              <i class="bi bi-database-fill"></i>
+            </div>
+            <span class="skill-category-title">Database &amp; Cloud</span>
+            <span class="skill-category-count">3 Skills</span>
+            <div class="skill-category-line"></div>
+          </div>
+          <div class="row g-3">
+
+            <div class="col-md-6 col-lg-4">
+              <div class="skill-card" style="--skill-color:#15803d; --skill-color2:#4ade80; --skill-bg:#f0fdf4;">
+                <div class="skill-icon-wrap"><i class="bi bi-database-fill" style="color:#15803d;"></i></div>
+                <div class="skill-info">
+                  <div class="skill-name">MongoDB</div>
+                  <div class="skill-level-label" style="color:#15803d;">Intermediate</div>
+                  <div class="skill-bar-track">
+                    <div class="skill-bar-fill" style="--skill-pct: 76%; --skill-color:#15803d; --skill-color2:#4ade80;"></div>
+                  </div>
+                  <div class="skill-pct-text">76%</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="skill-card" style="--skill-color:#1d4ed8; --skill-color2:#60a5fa; --skill-bg:#eff6ff;">
+                <div class="skill-icon-wrap"><i class="bi bi-database" style="color:#1d4ed8;"></i></div>
+                <div class="skill-info">
+                  <div class="skill-name">MySQL</div>
+                  <div class="skill-level-label" style="color:#1d4ed8;">Intermediate</div>
+                  <div class="skill-bar-track">
+                    <div class="skill-bar-fill" style="--skill-pct: 74%; --skill-color:#1d4ed8; --skill-color2:#60a5fa;"></div>
+                  </div>
+                  <div class="skill-pct-text">74%</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="skill-card" style="--skill-color:#d97706; --skill-color2:#fbbf24; --skill-bg:#fffbeb;">
+                <div class="skill-icon-wrap"><i class="bi bi-cloud-fill" style="color:#d97706;"></i></div>
+                <div class="skill-info">
+                  <div class="skill-name">Firebase</div>
+                  <div class="skill-level-label" style="color:#d97706;">Intermediate</div>
+                  <div class="skill-bar-track">
+                    <div class="skill-bar-fill" style="--skill-pct: 73%; --skill-color:#d97706; --skill-color2:#fbbf24;"></div>
+                  </div>
+                  <div class="skill-pct-text">73%</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ===== DEV TOOLS ===== -->
+        <div class="skill-category-block reveal" data-category="tools" id="cat-tools">
+          <div class="skill-category-header">
+            <div class="skill-category-icon" style="background:#fdf4ff; color:#a855f7;">
+              <i class="bi bi-wrench-adjustable"></i>
+            </div>
+            <span class="skill-category-title">Dev Tools &amp; Platforms</span>
+            <span class="skill-category-count">7 Skills</span>
+            <div class="skill-category-line"></div>
+          </div>
+          <div class="d-flex flex-wrap gap-3">
+            <span class="tool-pill" style="--tool-color:#1f2937;">
+              <i class="bi bi-github" style="color:#1f2937; font-size:1.1rem;"></i> GitHub
+            </span>
+            <span class="tool-pill" style="--tool-color:#007acc;">
+              <i class="bi bi-laptop" style="color:#007acc; font-size:1.1rem;"></i> VS Code
+            </span>
+            <span class="tool-pill" style="--tool-color:#ff6c37;">
+              <i class="bi bi-send-fill" style="color:#ff6c37; font-size:1.1rem;"></i> Postman
+            </span>
+            <span class="tool-pill" style="--tool-color:#00ad9f;">
+              <i class="bi bi-cloud-arrow-up-fill" style="color:#00ad9f; font-size:1.1rem;"></i> Netlify
+            </span>
+            <span class="tool-pill" style="--tool-color:#6366f1;">
+              <i class="bi bi-git" style="color:#6366f1; font-size:1.1rem;"></i> Git
+            </span>
+            <span class="tool-pill" style="--tool-color:#f97316;">
+              <i class="bi bi-terminal-fill" style="color:#f97316; font-size:1.1rem;"></i> Terminal / Bash
+            </span>
+            <span class="tool-pill" style="--tool-color:#8b5cf6;">
+              <i class="bi bi-brush-fill" style="color:#8b5cf6; font-size:1.1rem;"></i> Figma
+            </span>
+          </div>
+        </div>
+
+        <!-- ===== Currently Learning ===== -->
+        <div class="learning-banner reveal" id="learning-section">
+          <div class="row align-items-start g-4">
+            <div class="col-lg-4">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span style="font-size:1.3rem;">&#128640;</span>
+                <h2 class="mb-0">Currently Learning</h2>
+              </div>
+              <p>Always evolving — here's what I'm actively diving into right now.</p>
+              <a href="index.html#contact" class="btn-skills-outline"
+                style="border-color:rgba(255,255,255,0.35); color:#fff; margin-top: 8px;">
+                Collaborate with me <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+            <div class="col-lg-8">
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <div class="learning-item">
+                    <div class="learning-item-icon">&#9889;</div>
+                    <div class="flex-grow-1">
+                      <div class="learning-item-name">Next.js 14</div>
+                      <div class="learning-item-desc">App Router, Server Components</div>
+                      <div class="learning-progress-bar mt-2">
+                        <div class="learning-progress-fill" style="width:60%;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="learning-item">
+                    <div class="learning-item-icon">&#128051;</div>
+                    <div class="flex-grow-1">
+                      <div class="learning-item-name">Docker</div>
+                      <div class="learning-item-desc">Containerization &amp; DevOps</div>
+                      <div class="learning-progress-bar mt-2">
+                        <div class="learning-progress-fill" style="width:40%;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="learning-item">
+                    <div class="learning-item-icon">&#129302;</div>
+                    <div class="flex-grow-1">
+                      <div class="learning-item-name">Machine Learning</div>
+                      <div class="learning-item-desc">scikit-learn, TensorFlow basics</div>
+                      <div class="learning-progress-bar mt-2">
+                        <div class="learning-progress-fill" style="width:35%;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="learning-item">
+                    <div class="learning-item-icon">&#9729;&#65039;</div>
+                    <div class="flex-grow-1">
+                      <div class="learning-item-name">AWS Cloud</div>
+                      <div class="learning-item-desc">S3, EC2, Lambda fundamentals</div>
+                      <div class="learning-progress-bar mt-2">
+                        <div class="learning-progress-fill" style="width:30%;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== CTA ===== -->
+        <div class="skills-cta reveal" id="skills-cta">
+          <div style="font-size:2.5rem; margin-bottom:16px;">&#128161;</div>
+          <h2>Want to build something together?</h2>
+          <p>I'm always open to exciting projects and collaboration opportunities. Let's turn ideas into reality.</p>
+          <div class="d-flex gap-3 justify-content-center flex-wrap">
+            <a href="index.html#works" class="btn-skills-primary">
+              <i class="bi bi-folder2-open"></i> View My Projects
+            </a>
+            <a href="index.html#contact" class="btn-skills-outline">
+              <i class="bi bi-envelope-fill"></i> Get in Touch
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==========================================
+     * FOOTER
+     * ========================================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row g-4 mb-5">
+          <div class="col-lg-4 text-start">
+            <a class="footer-logo mb-3 d-inline-block" href="index.html">
+              <span>&lt;/&gt;</span> Chaitanya
+            </a>
+            <p class="footer-description pe-lg-4">
+              Building modern, responsive, and user-focused web applications. Let's create something great together.
+            </p>
+            <div class="footer-socials-grid mt-4">
+              <a href="https://github.com/chaitanya-295" target="_blank" class="footer-social-icon-v3" title="GitHub"><i class="bi bi-github"></i></a>
+              <a href="https://www.linkedin.com/in/chaitanyakamble29" target="_blank" class="footer-social-icon-v3" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="mailto:chaitanyakamble2005@gmail.com" class="footer-social-icon-v3" title="Email"><i class="bi bi-envelope-fill"></i></a>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-4 text-start ps-lg-5 mb-4 mb-sm-0">
+            <h4 class="footer-heading mb-4">Quick Links</h4>
+            <ul class="list-unstyled footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Me</a></li>
+              <li><a href="skills.html">Tech Skills</a></li>
+              <li><a href="works.html">My Work</a></li>
+              <li><a href="experience.html">Experience</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-4 text-start">
+            <h4 class="footer-heading mb-4">Contact Info</h4>
+            <ul class="list-unstyled footer-contact-info">
+              <li class="d-flex align-items-start gap-2 mb-3">
+                <i class="bi bi-envelope-fill text-accent"></i>
+                <a href="mailto:chaitanyakamble2005@gmail.com" class="text-decoration-none">chaitanyakamble2005@gmail.com</a>
+              </li>
+              <li class="d-flex align-items-start gap-2 mb-3">
+                <i class="bi bi-phone-fill text-accent"></i>
+                <span>+91 97305 93429</span>
+              </li>
+              <li class="d-flex align-items-start gap-2 mb-3">
+                <i class="bi bi-geo-alt-fill text-accent"></i>
+                <span>Pune, Maharashtra, India</span>
+              </li>
+              <li class="d-flex align-items-start gap-2">
+                <i class="bi bi-briefcase-fill text-accent"></i>
+                <span class="text-success-custom">Available for Projects</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="footer-divider mb-4">
+
+        <div class="row align-items-center">
+          <div class="col-md-6 text-start mb-3 mb-md-0">
+            <p class="footer-copyright mb-0">
+              &copy; <span id="copyrightYear">2026</span> Chaitanya Kamble. All Rights Reserved.
+            </p>
+          </div>
+          <div class="col-md-6 text-start text-md-end">
+            <p class="footer-credits mb-0">
+              Designed with <i class="bi bi-heart-fill text-danger mx-1"></i> &middot; Frontend Developer
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-watermark">Chaitanya</div>
+    </footer>
+
+  </div>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // Navbar scroll effect
+      const navbar = document.querySelector('.custom-navbar');
+      window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 40);
+      });
+
+      // Copyright year
+      document.getElementById('copyrightYear').textContent = new Date().getFullYear();
+
+      // Category filter
+      const filterBtns = document.querySelectorAll('.skill-filter-btn');
+      const categoryBlocks = document.querySelectorAll('.skill-category-block');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const target = btn.dataset.target;
+          categoryBlocks.forEach(block => {
+            if (target === 'all' || block.dataset.category === target) {
+              block.classList.remove('hidden');
+            } else {
+              block.classList.add('hidden');
+            }
+          });
+        });
+      });
+
+      // Scroll reveal + bar animation
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            const innerBars = entry.target.querySelectorAll('.skill-bar-fill');
+            innerBars.forEach(bar => {
+              setTimeout(() => bar.classList.add('animated'), 250);
+            });
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    });
+  </script>
+</body>
+
+</html>

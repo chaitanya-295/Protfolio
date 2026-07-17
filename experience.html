@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Experience | Chaitanya Kamble</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Professional experience and work history of Chaitanya Kamble — Full Stack Web Developer. Features timeline, internships, freelance work, and key accomplishments.">
+  <meta name="keywords"
+    content="Chaitanya Kamble, Experience, Work History, Resume, Full Stack Web Developer, Intern, Pune, Sinhgad Institute">
+  <meta name="author" content="Chaitanya Kamble">
+
+  <!-- Favicons -->
+  <link href="images/favicon.jpeg" rel="icon">
+
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=1.1">
+
+  <style>
+    /* ==========================================
+     * EXPERIENCE PAGE — ADDITIONAL STYLES
+     * ========================================== */
+
+    /* --- Hero Banner --- */
+    .exp-hero {
+      background: linear-gradient(135deg, #0f172a 0%, #161a3f 50%, #0f172a 100%);
+      padding: 120px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .exp-hero-orb {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .exp-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(99, 102, 241, 0.15);
+      border: 1px solid rgba(99, 102, 241, 0.35);
+      color: #a5b4fc;
+      padding: 6px 18px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .exp-hero-title {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+    }
+
+    .exp-hero-title span {
+      background: linear-gradient(135deg, #6366f1, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .exp-hero-sub {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 1.05rem;
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.75;
+    }
+
+    .exp-breadcrumb .breadcrumb-item a {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.88rem;
+      text-decoration: none;
+    }
+
+    .exp-breadcrumb .breadcrumb-item.active {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 0.88rem;
+    }
+
+    .exp-breadcrumb .breadcrumb-item+.breadcrumb-item::before {
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    /* Summary Stats Row */
+    .exp-summary-row {
+      margin-top: 40px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .exp-summary-pill {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(10px);
+      border-radius: 50px;
+      padding: 10px 22px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+    }
+
+    .exp-summary-pill i {
+      color: #a78bfa;
+      font-size: 1.05rem;
+    }
+
+    .exp-summary-pill strong {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .exp-summary-pill span {
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* --- Main Body --- */
+    .exp-body {
+      background: #f8fafc;
+      padding: 80px 0;
+    }
+
+    /* --- Reveal Animation --- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* --- Timeline adjustments for standalone page --- */
+    .exp-timeline-wrapper {
+      background: #ffffff;
+      border: 1.5px solid #f1f5f9;
+      border-radius: 28px;
+      padding: 60px 40px;
+      box-shadow: 0 10px 40px rgba(99, 102, 241, 0.04);
+    }
+
+    /* Sidebar info block */
+    .resume-download-card {
+      background: #ffffff;
+      border: 1.5px solid #f1f5f9;
+      border-radius: 24px;
+      padding: 32px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+      text-align: center;
+    }
+
+    .resume-download-card i {
+      font-size: 3rem;
+      color: #6366f1;
+      margin-bottom: 16px;
+      display: inline-block;
+    }
+
+    .btn-download-resume {
+      background: #6366f1;
+      border: 2px solid #6366f1;
+      color: #fff;
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+      margin-top: 14px;
+      width: 100%;
+      justify-content: center;
+      white-space: nowrap;
+      font-size: 0.95rem;
+    }
+
+    .btn-download-resume:hover {
+      background: #4f46e5;
+      border-color: #4f46e5;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(99, 102, 241, 0.25);
+      color: #fff;
+    }
+
+    /* --- Clean Experience Timeline Style --- */
+    .exp-timeline-container {
+      position: relative;
+      padding: 30px 0;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    .exp-timeline-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 4px;
+      background: linear-gradient(to bottom, #6366f1 0%, #a855f7 50%, rgba(99, 102, 241, 0.1) 100%);
+      transform: translateX(-50%);
+      border-radius: 4px;
+      z-index: 1;
+    }
+
+    .exp-timeline-item {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+
+    .exp-timeline-badge-wrap {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+    }
+
+    .exp-timeline-badge {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 5px solid #6366f1;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .exp-timeline-badge::after {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #6366f1;
+      transition: all 0.3s ease;
+    }
+
+    .exp-timeline-item.active-item .exp-timeline-badge {
+      border-color: #da1c5c;
+      animation: expPulse 2s infinite;
+    }
+
+    .exp-timeline-item.active-item .exp-timeline-badge::after {
+      background: #da1c5c;
+    }
+
+    .exp-timeline-item:hover .exp-timeline-badge {
+      transform: scale(1.2);
+      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);
+    }
+
+    @keyframes expPulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(218, 28, 92, 0.5);
+      }
+
+      70% {
+        box-shadow: 0 0 0 10px rgba(218, 28, 92, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(218, 28, 92, 0);
+      }
+    }
+
+    .exp-timeline-content {
+      width: 50%;
+      display: flex;
+    }
+
+    .exp-timeline-item.left-side {
+      justify-content: flex-start;
+    }
+
+    .exp-timeline-item.right-side {
+      justify-content: flex-end;
+    }
+
+    .exp-timeline-item.left-side .exp-timeline-content {
+      justify-content: flex-end;
+      padding-right: 45px;
+    }
+
+    .exp-timeline-item.right-side .exp-timeline-content {
+      justify-content: flex-start;
+      padding-left: 45px;
+    }
+
+    .exp-timeline-card {
+      width: 100%;
+      max-width: 400px;
+      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.75);
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .exp-timeline-card:hover {
+      background: #ffffff;
+      border-color: #6366f1;
+      box-shadow: 0 15px 35px rgba(99, 102, 241, 0.08);
+    }
+
+    .exp-timeline-item.left-side .exp-timeline-card:hover {
+      transform: translate(-10px, -5px);
+    }
+
+    .exp-timeline-item.right-side .exp-timeline-card:hover {
+      transform: translate(10px, -5px);
+    }
+
+    .exp-timeline-item.active-item .exp-timeline-card {
+      border-left: 4px solid #da1c5c;
+    }
+
+    @media (max-width: 768px) {
+      .exp-hero-title {
+        font-size: 2.2rem;
+      }
+
+      .exp-timeline-wrapper {
+        padding: 30px 16px;
+      }
+
+      .exp-timeline-container::before {
+        left: 20px;
+      }
+
+      .exp-timeline-item {
+        justify-content: flex-start !important;
+      }
+
+      .exp-timeline-badge-wrap {
+        left: 20px !important;
+        transform: translate(-50%, -50%);
+      }
+
+      .exp-timeline-content {
+        width: 100%;
+        padding-left: 45px !important;
+        padding-right: 0 !important;
+        justify-content: flex-start !important;
+      }
+
+      .exp-timeline-card {
+        max-width: 100%;
+      }
+
+      .exp-timeline-item.left-side .exp-timeline-card:hover,
+      .exp-timeline-item.right-side .exp-timeline-card:hover {
+        transform: translateY(-5px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app-wrapper">
+
+    <!-- ==========================================
+     * NAVIGATION BAR
+     * ========================================== -->
+    <nav class="navbar navbar-expand-lg sticky-top custom-navbar">
+      <div class="container">
+        <a class="navbar-brand navbar-logo" href="index.html" id="logoLink">
+          <span>&lt;/&gt;</span> Chaitanya
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">
+            <span class="navbar-toggler-span"></span>
+          </span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="skills.html">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="works.html">Works</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link active" href="experience.html">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="index.html#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="navbar-socials border-start ps-3 d-none d-lg-flex">
+          <a href="https://github.com/chaitanya-295" target="_blank" class="social-nav-icon"><i
+              class="bi bi-github"></i></a>
+          <a href="https://www.linkedin.com/in/chaitanyakamble29" target="_blank" class="social-nav-icon"><i
+              class="bi bi-linkedin"></i></a>
+          <a href="mailto:chaitanyakamble2005@gmail.com" class="social-nav-icon"><i class="bi bi-envelope-fill"></i></a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ==========================================
+     * HERO SECTION
+     * ========================================== -->
+    <section class="exp-hero" id="exp-top">
+      <div class="exp-hero-orb"
+        style="width:380px;height:380px;top:-120px;left:-100px;background:radial-gradient(circle,rgba(99,102,241,0.12),transparent 70%);">
+      </div>
+      <div class="exp-hero-orb"
+        style="width:280px;height:280px;bottom:-80px;right:0;background:radial-gradient(circle,rgba(139,92,246,0.1),transparent 70%);">
+      </div>
+
+      <div class="container text-center position-relative" style="z-index:2;">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb exp-breadcrumb justify-content-center">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Experience</li>
+          </ol>
+        </nav>
+
+        <div class="exp-hero-badge">
+          <i class="bi bi-briefcase-fill"></i> Work &amp; Career
+        </div>
+
+        <h1 class="exp-hero-title mb-4">
+          My <span>Experience</span>
+        </h1>
+        <p class="exp-hero-sub mx-auto">
+          A winding journey of professional growth — bridging freelance full stack development with structured
+          internship learning.
+        </p>
+
+        <!-- Stats summary pills -->
+        <div class="exp-summary-row">
+          <div class="exp-summary-pill">
+            <i class="bi bi-calendar3"></i>
+            <div><strong>2+ Years</strong><span class="d-block">Experience</span></div>
+          </div>
+          <div class="exp-summary-pill">
+            <i class="bi bi-globe"></i>
+            <div><strong>Remote/Freelance</strong><span class="d-block">Work Style</span></div>
+          </div>
+          <div class="exp-summary-pill">
+            <i class="bi bi-patch-check-fill"></i>
+            <div><strong>MERN &amp; Next.js</strong><span class="d-block">Specialty</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+     * MAIN CONTENT BODY
+     * ========================================== -->
+    <div class="exp-body">
+      <div class="container">
+        <div class="row">
+          <!-- Full-width Timeline Column -->
+          <div class="col-12">
+            <div class="reveal exp-timeline-wrapper">
+              <div class="exp-timeline-container">
+                
+                <!-- Timeline Item 2 (Freelance - Present) -->
+                <div class="exp-timeline-item active-item left-side">
+                  <div class="exp-timeline-badge-wrap">
+                    <div class="exp-timeline-badge"></div>
+                  </div>
+                  <div class="exp-timeline-content">
+                    <div class="exp-timeline-card">
+                      <div class="prof-card-header">
+                        <span class="prof-year-badge active">2023 - Present</span>
+                        <div class="prof-card-icon">
+                          <i class="bi bi-laptop-fill"></i>
+                        </div>
+                      </div>
+                      <h4 class="prof-card-title">Freelance Full Stack Developer</h4>
+                      <p class="prof-card-subtitle">Self-Employed • Remote / Global Clients</p>
+                      <ul class="prof-card-bullets">
+                        <li><i class="bi bi-check2-circle"></i> Architected and deployed 50+ custom web systems, SaaS dashboards, and cross-platform mobile apps.</li>
+                        <li><i class="bi bi-check2-circle"></i> Integrated responsive frontends (React, Next.js, Bootstrap) with scalable backend services (Node.js, Express, Django).</li>
+                        <li><i class="bi bi-check2-circle"></i> Designed schemas for SQL and NoSQL databases, implementing concurrency control and webhook handlers.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Timeline Item 1 (Internship - Completed) -->
+                <div class="exp-timeline-item right-side">
+                  <div class="exp-timeline-badge-wrap">
+                    <div class="exp-timeline-badge"></div>
+                  </div>
+                  <div class="exp-timeline-content">
+                    <div class="exp-timeline-card">
+                      <div class="prof-card-header">
+                        <span class="prof-year-badge">2023 (6 Months)</span>
+                        <div class="prof-card-icon">
+                          <i class="bi bi-terminal-fill"></i>
+                        </div>
+                      </div>
+                      <h4 class="prof-card-title">Web Development Intern</h4>
+                      <p class="prof-card-subtitle">Tech Startup • Pune, India</p>
+                      <ul class="prof-card-bullets">
+                        <li><i class="bi bi-check2-circle"></i> Developed clean, interactive front-end components using JavaScript, HTML5, and CSS/Bootstrap.</li>
+                        <li><i class="bi bi-check2-circle"></i> Maintained backend server routes, integrated MySQL databases, and documented RESTful API endpoints.</li>
+                        <li><i class="bi bi-check2-circle"></i> Worked alongside senior developers in an agile environment using Git/GitHub version control.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Full-width Resume / CV Download Section at Bottom -->
+          <div class="col-12 mt-5">
+            <div class="reveal">
+              <div class="cta-banner-wrapper p-4 p-md-5 rounded-4 text-center" style="background: linear-gradient(135deg, #1e1b4b, #0f172a); border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 20px 40px rgba(0,0,0,0.15);">
+                <div style="font-size: 3.5rem; color: #a78bfa; margin-bottom: 20px;">
+                  <i class="bi bi-file-earmark-pdf-fill"></i>
+                </div>
+                <h3 class="fw-bold mb-3" style="color: #ffffff; font-size: 2.2rem; letter-spacing: -0.02em;">Curriculum Vitae / Resume</h3>
+                <p class="mx-auto mb-4" style="max-width: 620px; color: rgba(255,255,255,0.65) !important; font-size: 1.05rem; line-height: 1.7;">
+                  Download my comprehensive CV for a complete, in-depth view of my technical skills, academic projects, educational credentials, and freelance engagements.
+                </p>
+                <a href="#" class="btn-download-resume d-inline-flex align-items-center gap-2" style="width: auto; padding: 14px 40px; background: #6366f1; border-color: #6366f1; color: #ffffff; font-weight: 700; border-radius: 12px; text-decoration: none; transition: all 0.3s ease;">
+                  <i class="bi bi-download"></i> Download Full Resume
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================
+     * FOOTER
+     * ========================================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row g-4 mb-5">
+          <div class="col-lg-4 text-start">
+            <a class="footer-logo mb-3 d-inline-block" href="index.html">
+              <span>&lt;/&gt;</span> Chaitanya
+            </a>
+            <p class="footer-description pe-lg-4">
+              Building modern, responsive, and user-focused web applications. Let's create something great together.
+            </p>
+            <div class="footer-socials-grid mt-4">
+              <a href="https://github.com/chaitanya-295" target="_blank" class="footer-social-icon-v3" title="GitHub"><i
+                  class="bi bi-github"></i></a>
+              <a href="https://www.linkedin.com/in/chaitanyakamble29" target="_blank" class="footer-social-icon-v3"
+                title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="mailto:chaitanyakamble2005@gmail.com" class="footer-social-icon-v3" title="Email"><i
+                  class="bi bi-envelope-fill"></i></a>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-4 text-start ps-lg-5 mb-4 mb-sm-0">
+            <h4 class="footer-heading mb-4">Quick Links</h4>
+            <ul class="list-unstyled footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Me</a></li>
+              <li><a href="skills.html">Tech Skills</a></li>
+              <li><a href="works.html">My Work</a></li>
+              <li><a href="experience.html">Experience</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-4 text-start">
+            <h4 class="footer-heading mb-4">Contact Info</h4>
+            <ul class="list-unstyled footer-contact-info">
+              <li class="d-flex align-items-start gap-2 mb-3">
+                <i class="bi bi-envelope-fill text-accent"></i>
+                <a href="mailto:chaitanyakamble2005@gmail.com"
+                  class="text-decoration-none">chaitanyakamble2005@gmail.com</a>
+              </li>
+              <li class="d-flex align-items-start gap-2 mb-3">
+                <i class="bi bi-phone-fill text-accent"></i>
+                <span>+91 97305 93429</span>
+              </li>
+              <li class="d-flex align-items-start gap-2 mb-3">
+                <i class="bi bi-geo-alt-fill text-accent"></i>
+                <span>Pune, Maharashtra, India</span>
+              </li>
+              <li class="d-flex align-items-start gap-2">
+                <i class="bi bi-briefcase-fill text-accent"></i>
+                <span class="text-success-custom">Available for Projects</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="footer-divider mb-4">
+
+        <div class="row align-items-center">
+          <div class="col-md-6 text-start mb-3 mb-md-0">
+            <p class="footer-copyright mb-0">
+              &copy; <span id="copyrightYear">2026</span> Chaitanya Kamble. All Rights Reserved.
+            </p>
+          </div>
+          <div class="col-md-6 text-start text-md-end">
+            <p class="footer-credits mb-0">
+              Designed with <i class="bi bi-heart-fill text-danger mx-1"></i> &middot; Frontend Developer
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-watermark">Chaitanya</div>
+    </footer>
+
+  </div>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // --- Navbar scroll effect ---
+      const navbar = document.querySelector('.custom-navbar');
+      window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 40);
+      });
+
+      // --- Copyright year ---
+      document.getElementById('copyrightYear').textContent = new Date().getFullYear();
+
+      // --- Scroll reveal animation ---
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    });
+  </script>
+</body>
+
+</html>
