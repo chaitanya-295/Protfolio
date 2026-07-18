@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,8 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project Detail | Chaitanya Kamble</title>
 
-  <!-- SEO Meta Tags — updated dynamically by JS -->
-  <meta name="description" content="Detailed case study of a project by Chaitanya Kamble — Full Stack Web Developer.">
+  <!-- SEO Meta Tags â€” updated dynamically by JS -->
+  <meta name="description" content="Detailed case study of a project by Chaitanya Kamble â€” Full Stack Web Developer.">
   <meta name="author" content="Chaitanya Kamble">
 
   <!-- Favicons -->
@@ -23,7 +23,7 @@
 
   <style>
     /* ==========================================
-     * PROJECT DETAIL PAGE — STYLES
+     * PROJECT DETAIL PAGE â€” STYLES
      * ========================================== */
 
     /* --- Hero Banner --- */
@@ -527,7 +527,7 @@
     </nav>
 
     <!-- ==========================================
-     * HERO — Dynamically populated
+     * HERO â€” Dynamically populated
      * ========================================== -->
     <section class="detail-hero" id="detail-hero">
       <div class="detail-hero-orb" style="width:380px;height:380px;top:-120px;left:-100px;background:radial-gradient(circle,rgba(99,102,241,0.12),transparent 70%);"></div>
@@ -546,8 +546,8 @@
         <div class="row align-items-center g-5 mt-1">
           <div class="col-lg-8">
             <div id="hero-category-badge" class="detail-category-badge mb-3 d-inline-flex"></div>
-            <h1 class="detail-hero-title mb-3" id="hero-title">—</h1>
-            <p class="detail-hero-subtitle" id="hero-tagline">—</p>
+            <h1 class="detail-hero-title mb-3" id="hero-title">â€”</h1>
+            <p class="detail-hero-subtitle" id="hero-tagline">â€”</p>
 
             <!-- Meta pills -->
             <div class="detail-meta-row" id="hero-meta-row"></div>
@@ -598,7 +598,7 @@
               <div class="reveal mb-4">
                 <div class="detail-section-title"><i class="bi bi-info-circle-fill text-indigo" style="color:#6366f1;"></i> About the Project</div>
                 <div class="detail-card">
-                  <p id="about-text">—</p>
+                  <p id="about-text">â€”</p>
                 </div>
               </div>
 
@@ -748,7 +748,7 @@
     // LOAD PROJECT DATA FROM data/projects.json
     // ==========================================
 
-    // Navbar scroll — runs immediately, no data needed
+    // Navbar scroll â€” runs immediately, no data needed
     const navbar = document.querySelector('.custom-navbar');
     window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 40));
     document.getElementById('copyrightYear').textContent = new Date().getFullYear();
@@ -764,7 +764,7 @@
         return res.json();
       })
       .then(projectsArray => {
-        // Convert array → keyed object  { "devflow": {...}, "apex": {...}, ... }
+        // Convert array â†’ keyed object  { "devflow": {...}, "apex": {...}, ... }
         const PROJECTS = {};
         projectsArray.forEach(p => { PROJECTS[p.id] = p; });
 
@@ -906,7 +906,7 @@
         document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
       })
       .catch(err => {
-        // Fetch failed — show not-found state
+        // Fetch failed â€” show not-found state
         console.error('Error loading projects.json:', err);
         document.getElementById('detail-hero').style.display = 'none';
         document.getElementById('project-content').classList.add('d-none');
