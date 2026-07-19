@@ -1,4 +1,4 @@
-﻿/* ==========================================
+/* ==========================================
  * DESIGN SYSTEM & ROOT VARIABLES
  * ========================================== */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
@@ -644,6 +644,8 @@ section[id] {
   font-weight: 600;
   color: var(--color-dark);
   line-height: 1.4;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .detail-link {
@@ -2037,14 +2039,14 @@ section[id] {
   .prof-timeline-item {
     flex-direction: row !important;
     justify-content: flex-start !important;
-    padding-left: 50px !important;
+    padding-left: 40px !important;
     padding-right: 0 !important;
   }
 
   .prof-timeline-dot-wrap {
-    left: 20px !important;
+    left: 10px !important;
     transform: translate(-50%, -50%);
-    top: 50%;
+    top: 40px;
   }
 
   .prof-timeline-item.right-card .prof-timeline-card,
