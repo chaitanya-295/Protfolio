@@ -1,106 +1,101 @@
 [
   {
-    "id": "devflow",
-    "title": "DevFlow",
-    "tagline": "A modern developer Q&A community platform built with the MERN stack, featuring real-time voting, markdown support, and live system stats.",
+    "id": "jobportal",
+    "title": "Job Portal",
+    "tagline": "A full-stack job portal that connects recruiters and job seekers through a secure, responsive, and user-friendly recruitment platform.",
     "category": "Full Stack",
     "categoryIcon": "bi-stack",
-    "image": "images/project_devflow.png",
-    "about": "DevFlow is a fully featured developer Q&A community platform inspired by Stack Overflow. Built end-to-end with the MERN stack (MongoDB, Express.js, React.js, Node.js), it supports real-time interactions such as up/down voting, comment threads, and live notification feeds. The UI is designed with a clean, distraction-free reading experience and a dark-mode toggle. Admin users can view system statistics including active questions, top contributors, and engagement metrics on a dedicated dashboard.",
+    "image": "images/Job-portal-web-app.png",
+    "about": "The Job Portal & Recruitment System is a full-stack web application developed using HTML, CSS, Bootstrap, Python, Django, and MongoDB. The platform enables recruiters to post and manage job listings while allowing job seekers to search for opportunities, submit applications, and manage their profiles. It features secure user authentication, responsive design, and efficient database management, providing a streamlined recruitment experience for both employers and candidates.",
     "features": [
-      "Real-time voting with instant UI feedback",
-      "Rich markdown editor with code block syntax highlighting",
-      "User authentication with JWT and role-based access",
-      "Reputation system with badges and points",
-      "Live notifications using WebSockets",
-      "Admin analytics dashboard with real-time stats",
-      "Full-text search with filters and tags",
-      "Responsive design across all devices"
+      "Secure User Authentication",
+      "Job Posting & Management",
+      "Job Search & Filtering",
+      "Online Job Applications",
+      "Responsive User Interface",
+      "MongoDB Database Integration"
     ],
     "tech": [
-      { "name": "React.js",     "icon": "bi-cpu",              "color": "#61dafb" },
-      { "name": "Node.js",      "icon": "bi-server",           "color": "#339933" },
-      { "name": "Express.js",   "icon": "bi-lightning-fill",   "color": "#828282" },
-      { "name": "MongoDB",      "icon": "bi-database-fill",    "color": "#47a248" },
-      { "name": "WebSocket",    "icon": "bi-wifi",             "color": "#6366f1" },
-      { "name": "Tailwind CSS", "icon": "bi-palette-fill",     "color": "#38bdf8" },
-      { "name": "JWT Auth",     "icon": "bi-shield-lock-fill", "color": "#f59e0b" },
-      { "name": "Chart.js",     "icon": "bi-bar-chart-fill",   "color": "#ff6384" }
+      { "name": "HTML5",     "icon": "bi-code-slash",              "color": "#61dafb" },
+      { "name": "CSS3",      "icon": "bi-palette-fill",           "color": "#339933" },
+      { "name": "Bootstrap",   "icon": "bi-lightning-fill",   "color": "#828282" },
+      { "name": "Python",      "icon": "bi-server",    "color": "#47a248" },
+      { "name": "Django",      "icon": "bi-cpu",       "color": "#091e42" },
+      { "name": "MongoDB", "icon": "bi-database-fill",     "color": "#38bdf8" }
     ],
     "meta": {
-      "year": "2024",
+      "year": "2026",
       "type": "Full Stack Web App",
       "role": "Solo Developer",
-      "duration": "3 Months",
+      "duration": "2 Months",
       "status": "Live",
-      "github": "https://github.com/chaitanya-295",
-      "live": "#"
+      "github": "https://github.com/chaitanya-295/jobportal-website",
+      "live": "https://jobportal-website-32oo.onrender.com"
     },
     "challenges": [
       {
-        "title": "Real-time Voting",
-        "desc": "Implementing optimistic UI updates for voting while keeping data consistent with server state required a custom event-based state management approach."
+        "title": "Job Search & Filtering",
+        "desc": "Implementing fast job search with multiple filters such as location, skills, salary, and job type required efficient query handling and database indexing."
       },
       {
-        "title": "Scalable Search",
-        "desc": "Building full-text search across thousands of questions with filters required designing a compound MongoDB index strategy for performance."
+        "title": "Resume & Application Management",
+        "desc": "Managing resume uploads and tracking applications across different stages required secure file handling and a reliable application status workflow."
       },
       {
-        "title": "Markdown Security",
-        "desc": "Sanitizing and rendering user-supplied markdown safely without XSS vulnerabilities was solved using a strict allowlist DOMPurify configuration."
+        "title": "Role-Based Access",
+        "desc": "Supporting separate recruiter and job-seeker features required role-based authentication and authorization to protect job posting and application data."
       }
     ],
-    "related": ["apex", "zenith"]
+    "related": ["weatherapp"]
   },
 
   {
-    "id": "apex",
-    "title": "Apex Tracker",
-    "tagline": "A mobile wellness & workout application with goal tracking, habit streaks, and a sleek dark-mode UI built with React Native and Firebase.",
-    "category": "Mobile App",
-    "categoryIcon": "bi-phone-fill",
-    "image": "images/project_apex.png",
-    "about": "Apex Tracker is a cross-platform mobile fitness application built with React Native and Expo. It allows users to track workouts, set daily wellness goals, monitor habit streaks, and visualize progress through interactive charts. Firebase Firestore handles real-time data sync across devices, while Firebase Auth provides secure login with Google and email. The app ships with a dark-mode-first design system and fully animated transitions throughout.",
+    "id": "weatherapp",
+    "title": "Weather App",
+    "tagline": "A modern full-stack weather application that provides real-time weather updates, hourly forecasts, 10-day forecasts, favorites, and recent search history through an intuitive dashboard.",
+    "category": "Web App",
+    "categoryIcon": "bi-cloud-fill",
+    "image": "images/weather-web-app.png",
+    "about": "The Weather Forecast Web App is a full-stack application that provides accurate and real-time weather information for cities worldwide. Users can search any city to view current weather conditions, hourly forecasts, and a 10-day weather forecast. The application includes secure authentication, favorite locations, recent search history, interactive weather charts, and a responsive dashboard. Built with React, Node.js, Express.js, MongoDB, and the OpenWeatherMap API, the project focuses on delivering a fast, user-friendly, and visually appealing weather experience across all devices.",
     "features": [
-      "Custom workout builder with exercise library",
-      "Daily habit tracking with streak counter",
-      "Interactive progress charts (weekly & monthly)",
-      "Real-time data sync via Firebase Firestore",
-      "Google OAuth and email sign-in",
-      "Push notifications for workout reminders",
-      "Offline support with AsyncStorage caching",
-      "Dark-mode-first design with smooth animations"
+      "Real-time Weather Data Integration via OpenWeatherMap API",
+      "Search Weather by Any City",
+      "Hourly & 10-Day Forecast",
+      "Secure User Authentication",
+      "Favorites & Search History",
+      "Responsive Dashboard Design"
     ],
     "tech": [
-      { "name": "React Native",     "icon": "bi-phone-fill",       "color": "#61dafb" },
-      { "name": "Expo",             "icon": "bi-box",              "color": "#000000" },
-      { "name": "Firebase Auth",    "icon": "bi-shield-lock-fill", "color": "#ffca28" },
-      { "name": "Firestore",        "icon": "bi-cloud-fill",       "color": "#ff6c37" },
-      { "name": "React Navigation", "icon": "bi-map-fill",         "color": "#6366f1" },
-      { "name": "Victory Charts",   "icon": "bi-bar-chart-fill",   "color": "#e63946" },
-      { "name": "AsyncStorage",     "icon": "bi-hdd-fill",         "color": "#94a3b8" }
+      { "name": "React.js",     "icon": "bi-laptop-fill",       "color": "#61dafb" },
+      { "name": "Node.js",          "icon": "bi-server",           "color": "#68a063" },
+      { "name": "Express.js",       "icon": "bi-code-slash",       "color": "#000000" },
+      { "name": "MongoDB",          "icon": "bi-database-fill",    "color": "#47A248" },
+      { "name": "OpenWeatherMap API", "icon": "bi-cloud-sun-fill",   "color": "#fbbf24" },
+      { "name": "JavaScript", "icon": "bi-filetype-js",   "color": "#F7DF1E" },
+      { "name": "Axios", "icon": "bi-arrow-left-right",   "color": "#E34F26" },
+      { "name": "HTML5 & CSS3", "icon": "bi-filetype-html",   "color": "#E34F26" }
     ],
     "meta": {
-      "year": "2024",
-      "type": "Mobile App (iOS & Android)",
+      "year": "2026",
+      "type": "Full Stack Web App",
       "role": "Solo Developer",
       "duration": "2.5 Months",
       "status": "Live",
-      "github": "https://github.com/chaitanya-295",
-      "live": "#"
+      "github": "https://github.com/chaitanya-295/weather-app",
+      "live": "https://weather-app-gray-beta-bwlz9ec3j1.vercel.app/"
     },
     "challenges": [
       {
-        "title": "Offline-first Architecture",
-        "desc": "Designing a sync strategy that works offline and merges data correctly when reconnecting required a careful local-first queue approach with Firestore."
+        "title": "Real-time Weather Data",
+        "desc": "Fetching and displaying accurate real-time weather conditions from the OpenWeatherMap API required handling asynchronous API requests, loading states, and API errors gracefully."
       },
       {
-        "title": "Animation Performance",
-        "desc": "Achieving 60fps animations across older Android devices required migrating from JS-driven to native Animated.Value with the useNativeDriver flag."
+        "title": "Location-based Forecasts",
+        "desc": "Providing weather information based on the user's current location required integrating the browser Geolocation API with weather services while handling permission and location errors."
       },
       {
-        "title": "Chart Interactivity",
-        "desc": "Building touch-responsive charts with real data aggregation on-device demanded efficient memoization strategies to avoid re-render bottlenecks."
+        "title": "Dynamic Weather UI",
+        "desc": "Creating a responsive interface that dynamically changes weather conditions, icons, and backgrounds based on live forecast data required state-driven rendering and conditional UI logic."
       }
     ],
     "related": ["devflow", "zenith"]
