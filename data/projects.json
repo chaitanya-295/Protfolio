@@ -46,7 +46,7 @@
         "desc": "Supporting separate recruiter and job-seeker features required role-based authentication and authorization to protect job posting and application data."
       }
     ],
-    "related": ["weatherapp"]
+    "related": ["weatherapp", "brewhouse"]
   },
 
   {
@@ -98,7 +98,7 @@
         "desc": "Creating a responsive interface that dynamically changes weather conditions, icons, and backgrounds based on live forecast data required state-driven rendering and conditional UI logic."
       }
     ],
-    "related": ["devflow", "zenith"]
+    "related": ["jobportal", "brewhouse"]
   },
 
   {
@@ -107,197 +107,48 @@
     "tagline": "A modern full-stack cafe web application featuring secure authentication, online ordering, an admin dashboard, and a responsive user experience.",
     "category": "Full Stack Web Application",
     "categoryIcon": "bi-laptop-fill",
-    "image": "images/project_barehouse.png",
-    "about": "BrewHouse Cafe is a modern full-stack web application designed to provide a seamless experience for customers and administrators. It features secure authentication, online ordering capabilities, an admin dashboard for managing inventory and orders, and a responsive user interface.",
+    "image": "images/brewhouse-website.png",
+    "about": "BrewHouse Cafe is a full-stack cafe web application designed to provide a seamless online dining experience. Customers can browse food and beverage menus, create accounts, securely log in, place orders, and manage their profiles. The application also includes an Admin Dashboard that enables administrators to manage menu items, categories, customer orders, and user accounts efficiently. Built with React and Firebase, the platform delivers a responsive, secure, and intuitive experience across desktop and mobile devices.",
     "features": [
-      "Live analytics charts updated via WebSocket",
-      "Embedded AI assistant with project-aware context",
-      "Multi-tenant data management with role permissions",
-      "Next.js 13 App Router with server-side rendering",
-      "Django Channels for real-time WebSocket communication",
-      "REST API with DRF and token authentication",
-      "CSV/PDF report export with scheduled delivery",
-      "Fully responsive with mobile-optimised sidebar"
+      "Secure User Authentication",
+      "Interactive Food & Beverage Menu",
+      "Online Order Management",
+      "Admin Dashboard",
+      "Firebase Database Integration",
+      "Responsive User Interface"
     ],
     "tech": [
-      { "name": "Next.js 13",      "icon": "bi-lightning-fill", "color": "#000000" },
-      { "name": "Django",          "icon": "bi-file-code",      "color": "#44b78b" },
-      { "name": "Django Channels", "icon": "bi-wifi",           "color": "#6366f1" },
-      { "name": "Python",          "icon": "bi-filetype-py",    "color": "#3776ab" },
-      { "name": "WebSocket",       "icon": "bi-reception-4",    "color": "#a78bfa" },
-      { "name": "OpenAI API",      "icon": "bi-robot",          "color": "#10a37f" },
-      { "name": "PostgreSQL",      "icon": "bi-database",       "color": "#336791" },
-      { "name": "Tailwind CSS",    "icon": "bi-palette-fill",   "color": "#38bdf8" }
+
+      { "name": "React.js", "icon": "bi-laptop-fill", "color": "#61dafb" },
+      { "name": "Firebase", "icon": "bi-fire", "color": "#ffca28" },
+      { "name": "JavaScript", "icon": "bi-filetype-js", "color": "#f7df1e" },
+      { "name": "HTML5", "icon": "bi-filetype-html", "color": "#e34f26" },
+      { "name": "Tailwind CSS",    "icon": "bi-palette-fill",   "color": "#38bdf8" },
+      { "name": "React Router", "icon": "bi-signpost-split-fill", "color": "#f44250" }
     ],
     "meta": {
-      "year": "2024",
-      "type": "SaaS Dashboard",
+      "year": "2026",
+      "type": "Full Stack Web Application",
       "role": "Full Stack Developer",
-      "duration": "4 Months",
+      "duration": "1 Months",
       "status": "Live",
-      "github": "https://github.com/chaitanya-295",
-      "live": "#"
+      "github": "https://github.com/chaitanya-295/BrewHouse-Cafe",
+      "live": "https://brew-house-cafe-eta.vercel.app/"
     },
     "challenges": [
       {
-        "title": "WebSocket + SSR Hydration",
-        "desc": "Preventing hydration mismatches between server-rendered chart state and client-driven WebSocket updates required a careful 'defer-to-client' rendering pattern."
+        "title": "Responsive Menu Design",
+        "desc": "Creating a responsive menu layout that remains easy to browse across mobile, tablet, and desktop screens required flexible grid layouts and adaptive UI components."
       },
       {
-        "title": "AI Context Management",
-        "desc": "Building a sliding context window that injects relevant project data into each OpenAI prompt without exceeding token limits required smart context compression logic."
+        "title": "Online Ordering Flow",
+        "desc": "Designing a smooth ordering experience from menu selection to cart management required maintaining consistent item state and handling quantity updates without disrupting the user experience."
       },
       {
-        "title": "Multi-tenant Isolation",
-        "desc": "Ensuring strict data isolation between tenants at the database query level (using Django's row-level security patterns) while keeping APIs fast was the core backend challenge."
+        "title": "Performance & Visuals",
+        "desc": "Balancing high-quality food imagery and attractive animations with fast page loading required image optimization, lazy loading, and careful management of frontend assets."
       }
     ],
-    "related": ["devflow", "apex"]
-  },
-
-  {
-    "id": "shopnest",
-    "title": "ShopNest",
-    "tagline": "A full-featured e-commerce platform with product catalog, cart, Stripe payments, and a powerful admin panel — built with Django and MySQL.",
-    "category": "Full Stack",
-    "categoryIcon": "bi-bag-fill",
-    "image": "images/project_devflow.png",
-    "about": "ShopNest is a complete e-commerce solution built with Django and MySQL. It includes a full product catalog with categories and search, a session-based shopping cart, Stripe Checkout integration for payments, order management, and a custom admin panel for managing products, inventory, orders, and customers. Email confirmations are sent via SMTP on successful checkout. The frontend uses Django templates with Bootstrap 5 for a clean, responsive UI.",
-    "features": [
-      "Product catalog with categories, search, and filters",
-      "Session-based shopping cart with quantity management",
-      "Stripe Checkout integration for secure payments",
-      "Order management with status tracking",
-      "Email confirmation on checkout",
-      "Custom admin panel for inventory & orders",
-      "User authentication with registration & profiles",
-      "Mobile responsive design with Bootstrap 5"
-    ],
-    "tech": [
-      { "name": "Django",      "icon": "bi-file-code",        "color": "#44b78b" },
-      { "name": "Python",      "icon": "bi-filetype-py",      "color": "#3776ab" },
-      { "name": "MySQL",       "icon": "bi-database",         "color": "#4479a1" },
-      { "name": "Stripe API",  "icon": "bi-credit-card-fill", "color": "#635bff" },
-      { "name": "Bootstrap 5", "icon": "bi-bootstrap",        "color": "#7952b3" },
-      { "name": "HTML5",       "icon": "bi-filetype-html",    "color": "#e34f26" },
-      { "name": "JavaScript",  "icon": "bi-filetype-js",      "color": "#f7df1e" }
-    ],
-    "meta": {
-      "year": "2023",
-      "type": "E-Commerce Platform",
-      "role": "Solo Developer",
-      "duration": "2 Months",
-      "status": "Live",
-      "github": "https://github.com/chaitanya-295",
-      "live": "#"
-    },
-    "challenges": [
-      {
-        "title": "Payment Webhooks",
-        "desc": "Handling Stripe webhook events reliably to update order status — including retries and idempotency — required careful signature validation and atomic DB transactions."
-      },
-      {
-        "title": "Inventory Concurrency",
-        "desc": "Preventing overselling when multiple users check out the same product simultaneously was solved with Django's select_for_update() row locking."
-      }
-    ],
-    "related": ["devflow", "zenith"]
-  },
-
-  {
-    "id": "portfoliocms",
-    "title": "PortfolioCMS",
-    "tagline": "A dynamic portfolio content management system where users can manage projects, blogs, and skills via a beautiful React admin UI backed by Firebase.",
-    "category": "Frontend",
-    "categoryIcon": "bi-window",
-    "image": "images/project_apex.png",
-    "about": "PortfolioCMS is a headless CMS purpose-built for developer portfolios. The admin interface is built in React with a clean dashboard where you can add, edit, or delete projects, blog posts, and skill entries — all stored in Firebase Firestore. The public-facing portfolio reads from the same Firestore collection and updates in real-time without re-deployment. Firebase Auth controls admin access and Cloudinary handles image uploads.",
-    "features": [
-      "Drag-and-drop project reordering",
-      "Rich text blog editor with image uploads",
-      "Skill proficiency manager with live preview",
-      "Real-time Firestore sync — no re-deploys needed",
-      "Firebase Auth protected admin routes",
-      "Cloudinary image storage and optimization",
-      "SEO metadata editor per project/blog",
-      "Dark/light mode toggle"
-    ],
-    "tech": [
-      { "name": "React.js",    "icon": "bi-cpu",           "color": "#61dafb" },
-      { "name": "Firebase",    "icon": "bi-cloud-fill",    "color": "#ffca28" },
-      { "name": "Firestore",   "icon": "bi-database-fill", "color": "#ff6c37" },
-      { "name": "Cloudinary",  "icon": "bi-image-fill",    "color": "#3448c5" },
-      { "name": "Tailwind CSS","icon": "bi-palette-fill",  "color": "#38bdf8" },
-      { "name": "React DnD",   "icon": "bi-grip-vertical", "color": "#6366f1" }
-    ],
-    "meta": {
-      "year": "2023",
-      "type": "CMS / Frontend App",
-      "role": "Solo Developer",
-      "duration": "1.5 Months",
-      "status": "Live",
-      "github": "https://github.com/chaitanya-295",
-      "live": "#"
-    },
-    "challenges": [
-      {
-        "title": "Optimistic UI Updates",
-        "desc": "Making the admin feel instant while Firestore writes complete in background required an optimistic update pattern with rollback on error."
-      },
-      {
-        "title": "Image Lazy Loading",
-        "desc": "Implementing progressive image loading with Cloudinary's transformation API reduced page LCP by over 40%."
-      }
-    ],
-    "related": ["devflow", "apex"]
-  },
-
-  {
-    "id": "healthpulse",
-    "title": "HealthPulse",
-    "tagline": "A patient health monitoring dashboard with real-time vitals, appointment scheduling, and PDF report generation — built with React and Node.js.",
-    "category": "Dashboard",
-    "categoryIcon": "bi-heart-pulse-fill",
-    "image": "images/project_zenith.png",
-    "about": "HealthPulse is a healthcare admin dashboard designed for clinics and small hospitals. It provides a unified view of patient vitals (blood pressure, heart rate, SpO2), an appointment scheduler with calendar view, and one-click PDF report generation. The backend is a Node.js/Express REST API connected to MongoDB. Chart.js renders live vitals that update via polling every 30 seconds. Role-based access distinguishes between doctor and admin views.",
-    "features": [
-      "Real-time vitals monitoring with threshold alerts",
-      "Calendar-based appointment scheduling",
-      "Patient profile management with medical history",
-      "One-click PDF report generation (jsPDF)",
-      "Role-based access — Doctor vs Admin views",
-      "REST API with Express.js and JWT auth",
-      "Responsive Chart.js visualizations",
-      "Email reminders for upcoming appointments"
-    ],
-    "tech": [
-      { "name": "React.js",   "icon": "bi-cpu",                    "color": "#61dafb" },
-      { "name": "Node.js",    "icon": "bi-server",                 "color": "#339933" },
-      { "name": "Express.js", "icon": "bi-lightning-fill",         "color": "#828282" },
-      { "name": "MongoDB",    "icon": "bi-database-fill",          "color": "#47a248" },
-      { "name": "Chart.js",   "icon": "bi-bar-chart-fill",         "color": "#ff6384" },
-      { "name": "jsPDF",      "icon": "bi-file-earmark-pdf-fill",  "color": "#e63946" },
-      { "name": "JWT",        "icon": "bi-shield-lock-fill",       "color": "#f59e0b" }
-    ],
-    "meta": {
-      "year": "2024",
-      "type": "Healthcare Dashboard",
-      "role": "Full Stack Developer",
-      "duration": "3 Months",
-      "status": "Live",
-      "github": "https://github.com/chaitanya-295",
-      "live": "#"
-    },
-    "challenges": [
-      {
-        "title": "HIPAA-style Data Privacy",
-        "desc": "Designing the data model to allow granular per-patient access control while keeping API responses performant required a carefully structured permission layer."
-      },
-      {
-        "title": "PDF Generation at Scale",
-        "desc": "Generating complex multi-page PDF reports client-side without blocking the UI was solved by offloading jsPDF work to a Web Worker."
-      }
-    ],
-    "related": ["zenith", "devflow"]
+    "related": ["jobportal", "weatherapp"]
   }
 ]
