@@ -102,13 +102,13 @@
   },
 
   {
-    "id": "zenith",
-    "title": "Zenith AI",
-    "tagline": "A real-time SaaS administration dashboard integrated with an AI assistant workspace and live analytics — built with Next.js and Django.",
-    "category": "Dashboard",
-    "categoryIcon": "bi-bar-chart-fill",
-    "image": "images/project_zenith.png",
-    "about": "Zenith AI is a production-grade SaaS admin dashboard featuring real-time charts, an embedded AI chat assistant, and a multi-tenant data management interface. The frontend is built with Next.js 13 App Router while the backend runs on Django with Django REST Framework and Django Channels for WebSocket support. The AI workspace integrates with OpenAI's API to provide context-aware responses on project data. Charts update live via WebSocket pushes without page refresh.",
+    "id": "brewhouse",
+    "title": "BrewHouse Cafe",
+    "tagline": "A modern full-stack cafe web application featuring secure authentication, online ordering, an admin dashboard, and a responsive user experience.",
+    "category": "Full Stack Web Application",
+    "categoryIcon": "bi-laptop-fill",
+    "image": "images/project_barehouse.png",
+    "about": "BrewHouse Cafe is a modern full-stack web application designed to provide a seamless experience for customers and administrators. It features secure authentication, online ordering capabilities, an admin dashboard for managing inventory and orders, and a responsive user interface.",
     "features": [
       "Live analytics charts updated via WebSocket",
       "Embedded AI assistant with project-aware context",
