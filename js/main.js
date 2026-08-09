@@ -118,7 +118,45 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 7. Interactive Project Category Filtering
+  // 7. Hero Typed Background Text Animation
+  const typedElement = document.getElementById('heroTyped');
+  const typingWords = ['Frontend', 'Backend', 'Fullstack', 'Software'];
+
+  if (typedElement) {
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typeSpeed = 120;
+    const deleteSpeed = 80;
+    const delayBetweenWords = 1400;
+
+    const updateTyping = () => {
+      const currentWord = typingWords[wordIndex];
+      const currentText = currentWord.substring(0, charIndex);
+      typedElement.textContent = currentText;
+
+      if (!isDeleting && charIndex < currentWord.length) {
+        charIndex += 1;
+        setTimeout(updateTyping, typeSpeed);
+      } else if (isDeleting && charIndex > 0) {
+        charIndex -= 1;
+        setTimeout(updateTyping, deleteSpeed);
+      } else {
+        if (!isDeleting) {
+          isDeleting = true;
+          setTimeout(updateTyping, delayBetweenWords);
+        } else {
+          isDeleting = false;
+          wordIndex = (wordIndex + 1) % typingWords.length;
+          setTimeout(updateTyping, typeSpeed);
+        }
+      }
+    };
+
+    updateTyping();
+  }
+
+  // 8. Interactive Project Category Filtering
   const filterButtons = document.querySelectorAll('.filter-tabs .btn-filter');
   const projectItems = document.querySelectorAll('.project-grid .project-item');
 
